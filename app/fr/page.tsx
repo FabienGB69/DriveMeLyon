@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { Hero } from "@/components/sections/Hero";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { TrustedBy } from "@/components/sections/TrustedBy";
 import { SignatureExperiences } from "@/components/sections/SignatureExperiences";
 import { WineRegions } from "@/components/sections/WineRegions";
 import { InternationalClients } from "@/components/sections/InternationalClients";
@@ -34,6 +35,7 @@ export default function FRHomePage() {
           ctaSecondary={{ label: "Demander un transfert", href: "/fr/contact" }}
         />
         <GoogleReviews lang="fr" />
+        <TrustedBy lang="fr" />
         <SignatureExperiences lang="fr" />
         <WineRegions lang="fr" />
         <InternationalClients lang="fr" />
