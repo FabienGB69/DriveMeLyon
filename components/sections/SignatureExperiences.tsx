@@ -9,7 +9,7 @@ interface SignatureExperiencesProps {
 
 export function SignatureExperiences({ lang = "en" }: SignatureExperiencesProps) {
   return (
-    <section className="bg-[#faf9f6] py-24">
+    <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">

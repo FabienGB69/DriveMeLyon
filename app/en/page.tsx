@@ -5,8 +5,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { Hero } from "@/components/sections/Hero";
-import { SignatureExperiences } from "@/components/sections/SignatureExperiences";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { SignatureExperiences } from "@/components/sections/SignatureExperiences";
+import { WineRegions } from "@/components/sections/WineRegions";
+import { InternationalClients } from "@/components/sections/InternationalClients";
 import { Fleet } from "@/components/sections/Fleet";
 import { BookingCTA } from "@/components/sections/BookingCTA";
 
@@ -27,8 +29,10 @@ export default function ENHomePage() {
           ctaPrimary={{ label: "Book a wine tour", href: "/en/wine-tours" }}
           ctaSecondary={{ label: "Request a transfer", href: "/en/contact" }}
         />
-        <SignatureExperiences lang="en" />
         <GoogleReviews lang="en" />
+        <SignatureExperiences lang="en" />
+        <WineRegions lang="en" />
+        <InternationalClients lang="en" />
         <Fleet lang="en" />
         <BookingCTA lang="en" />
       </main>

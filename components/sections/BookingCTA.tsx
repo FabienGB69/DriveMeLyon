@@ -9,12 +9,12 @@ interface BookingCTAProps {
 export function BookingCTA({ lang = "en", title, subtitle }: BookingCTAProps) {
   const defaultTitle =
     lang === "en"
-      ? "Ready to discover Beaujolais from Lyon?"
-      : "Prêt à découvrir le Beaujolais depuis Lyon ?";
+      ? "Plan your private experience from Lyon"
+      : "Planifiez votre expérience privée depuis Lyon";
   const defaultSubtitle =
     lang === "en"
-      ? "Contact us today to design your bespoke private wine tour or transfer with premium chauffeur service."
-      : "Contactez-nous aujourd'hui pour concevoir votre circuit viticole privé sur-mesure avec chauffeur haut de gamme.";
+      ? "Contact us to design your bespoke wine tour or premium transfer. Fast response guaranteed."
+      : "Contactez-nous pour concevoir votre circuit viticole ou transfert premium sur-mesure. Réponse rapide garantie.";
 
   return (
     <section className="bg-[#0a0a0a] py-24">
@@ -30,10 +30,13 @@ export function BookingCTA({ lang = "en", title, subtitle }: BookingCTAProps) {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button href={`/${lang}/contact`} variant="primary">
-            {lang === "en" ? "Request private wine tour" : "Demander mon circuit privé"}
+            {lang === "en" ? "Request availability" : "Demander les disponibilités"}
           </Button>
           <Button href="https://wa.me/33658593922" variant="whatsapp" external>
-            Chat WhatsApp
+            {lang === "en" ? "Contact on WhatsApp" : "Contacter sur WhatsApp"}
+          </Button>
+          <Button href="tel:+33658593922" variant="outline-light">
+            {lang === "en" ? "Call now" : "Appeler maintenant"}
           </Button>
         </div>
       </div>

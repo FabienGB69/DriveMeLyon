@@ -45,4 +45,22 @@ export const reviews: Review[] = [
     type: "Hotel Transfer",
     avatarUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=80&auto=format&fit=crop",
   },
+  {
+    id: "james-wilson",
+    name: "James Wilson",
+    date: "October 2023",
+    rating: 5,
+    text: "Perfect airport transfer from Lyon Saint-Exupéry. The driver was waiting for us with a sign, the Mercedes was immaculate, and we arrived at our hotel with time to spare. Will definitely book again.",
+    type: "Airport Transfer",
+    avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=80&auto=format&fit=crop",
+  },
+  {
+    id: "sophie-laurent",
+    name: "Sophie Laurent",
+    date: "May 2024",
+    rating: 5,
+    text: "Une journée exceptionnelle dans le Beaujolais ! Sanath connaît parfaitement les domaines, nous a guidés vers des vins remarquables et rendu la journée inoubliable. Le véhicule était confortable et très propre.",
+    type: "Wine Tour",
+    avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=80&auto=format&fit=crop",
+  },
 ];

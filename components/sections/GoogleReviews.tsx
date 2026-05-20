@@ -1,112 +1,115 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { reviews } from "@/data/reviews";
-import { TrustBar } from "./TrustBar";
-import { Button } from "@/components/ui/Button";
 
 interface GoogleReviewsProps {
   lang?: "en" | "fr";
 }
 
 export function GoogleReviews({ lang = "en" }: GoogleReviewsProps) {
-  const [current, setCurrent] = useState(0);
-  const perPage = 2;
-  const total = Math.ceil(reviews.length / perPage);
-  const visible = reviews.slice(current * perPage, current * perPage + perPage);
+  const GOOGLE_URL = "https://search.google.com/local/reviews?placeid=ChIJ6cu2eq3t9EcRgv3ak_zahtI";
 
   return (
-    <section className="bg-[#f3f1eb] py-24">
+    <section className="bg-[#faf9f6] py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-10">
+
+        {/* Header */}
+        <div className="text-center mb-12">
           <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">
-            {lang === "en" ? "Guest Testimonials" : "Avis Clients"}
+            {lang === "en" ? "Guest Reviews" : "Avis Clients"}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-[#0a0a0a] mb-4">
             {lang === "en" ? "Trusted by international travelers" : "La confiance des voyageurs internationaux"}
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 text-base max-w-2xl mx-auto">
             {lang === "en"
-              ? "Rated on Google by clients from all over the world."
-              : "Découvrez les avis laissés sur Google par nos clients du monde entier."}
+              ? "Guests choose Drive Me Lyon for punctual airport transfers, premium Mercedes comfort and private wine tours from Lyon."
+              : "Nos clients choisissent Drive Me Lyon pour la ponctualité des transferts, le confort Mercedes premium et les excursions viticoles privées depuis Lyon."}
           </p>
         </div>
 
-        <div className="mb-12">
-          <TrustBar lang={lang} />
+        {/* Google trust block */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+          <a
+            href={GOOGLE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-white border border-black/8 shadow-sm rounded-sm px-7 py-4 hover:border-[#c5a880]/40 transition-colors"
+          >
+            {/* Google G */}
+            <svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3C34 32.3 29.5 35 24 35c-6.1 0-11-4.9-11-11s4.9-11 11-11c2.8 0 5.3 1 7.3 2.7l5.7-5.7C33.4 7.5 28.9 5.5 24 5.5 13.8 5.5 5.5 13.8 5.5 24S13.8 42.5 24 42.5 42.5 34.2 42.5 24c0-1.2-.1-2.4-.3-3.5h1.4z"/>
+              <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.5 16.2 19 13 24 13c2.8 0 5.3 1 7.3 2.7l5.7-5.7C33.4 7.5 28.9 5.5 24 5.5c-7.5 0-14 4.3-17.7 10.7-.5.8-.5 1.7 0 2.5z"/>
+              <path fill="#FBBC05" d="M24 42.5c4.8 0 9.2-1.8 12.5-4.8l-6-5.1c-1.8 1.3-4 2-6.5 2-5.5 0-10-3.7-11.3-8.7l-6.5 5C7 36.7 15 42.5 24 42.5z"/>
+              <path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.7 2-2 3.8-3.7 5.1l6 5.1C37.2 39.8 43 34.5 43 24c0-1.2-.1-2.4-.3-3.5h1.4-.5z"/>
+            </svg>
+            <div className="text-left">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-xl font-bold text-[#0a0a0a]">5.0</span>
+                <span className="text-[#FBBC05] text-lg tracking-tight">★★★★★</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                {lang === "en" ? `${reviews.length} reviews on Google` : `${reviews.length} avis sur Google`}
+              </p>
+            </div>
+          </a>
+
+          <a
+            href={GOOGLE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold text-[#c5a880] hover:underline underline-offset-4"
+          >
+            {lang === "en" ? "Read all Google reviews →" : "Lire tous les avis Google →"}
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {visible.map((review) => (
+        {/* Reviews grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-white rounded-sm border border-black/[0.04] shadow-sm p-8 relative flex flex-col"
+              className="bg-white rounded-sm border border-black/[0.05] shadow-sm p-7 relative flex flex-col"
             >
-              {/* Source badge */}
-              <div className="absolute top-5 right-5 flex items-center gap-1.5 text-[0.65rem] font-semibold text-gray-400 bg-gray-50 border border-black/5 px-2 py-1 rounded-full">
-                <span className="text-[#4285F4]">G</span> Google Review
+              {/* Google badge */}
+              <div className="absolute top-5 right-5 flex items-center gap-1 text-[0.6rem] font-semibold text-gray-400 bg-gray-50 border border-black/5 px-2 py-1 rounded-full">
+                <span className="text-[#4285F4] font-bold text-xs">G</span>
+                <span>Google</span>
               </div>
 
-              {/* Quote mark */}
-              <span className="absolute top-4 left-7 font-serif text-8xl text-[#c5a880]/10 leading-none select-none">&ldquo;</span>
-
-              <div className="flex items-center gap-3 mb-4 relative">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#c5a880] flex-shrink-0">
-                  <Image src={review.avatarUrl} alt={review.name} fill className="object-cover" sizes="48px" />
+              {/* Reviewer */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#c5a880]/30 flex-shrink-0">
+                  <Image src={review.avatarUrl} alt={review.name} fill className="object-cover" sizes="40px" />
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0a0a0a] text-sm">{review.name}</p>
-                  <p className="text-xs text-gray-400">{review.date}</p>
+                  <p className="font-semibold text-[#0a0a0a] text-sm leading-tight">{review.name}</p>
+                  <p className="text-[0.7rem] text-gray-400">{review.date}</p>
                 </div>
               </div>
 
-              <div className="text-[#c5a880] text-sm mb-3">{"★".repeat(review.rating)}</div>
+              <div className="text-[#FBBC05] text-sm mb-3">{"★".repeat(review.rating)}</div>
 
-              <p className="text-gray-700 text-sm leading-relaxed italic flex-grow">&ldquo;{review.text}&rdquo;</p>
+              <p className="text-gray-600 text-sm leading-relaxed flex-grow">&ldquo;{review.text}&rdquo;</p>
 
-              <span className="mt-4 inline-block text-[0.65rem] font-bold uppercase tracking-wider text-[#c5a880] bg-[#c5a880]/10 px-2.5 py-1 rounded-sm self-start">
+              <span className="mt-5 inline-block text-[0.6rem] font-bold uppercase tracking-wider text-[#c5a880] bg-[#c5a880]/10 px-2.5 py-1 rounded-sm self-start">
                 {review.type}
               </span>
             </div>
           ))}
         </div>
 
-        {/* Pagination */}
-        <div className="flex justify-center items-center gap-4 mb-10">
-          <button
-            onClick={() => setCurrent((c) => Math.max(0, c - 1))}
-            disabled={current === 0}
-            className="w-11 h-11 rounded-full border border-black/10 bg-white flex items-center justify-center text-sm hover:border-[#c5a880] hover:text-[#c5a880] transition-all disabled:opacity-30"
+        {/* Bottom CTA */}
+        <div className="text-center mt-10">
+          <a
+            href={GOOGLE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-[#c5a880] text-[#c5a880] text-sm font-semibold px-8 py-3 rounded-sm hover:bg-[#c5a880] hover:text-white transition-colors"
           >
-            ←
-          </button>
-          <div className="flex gap-2">
-            {Array.from({ length: total }).map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all ${i === current ? "w-6 bg-[#c5a880]" : "w-2 bg-black/15"}`}
-              />
-            ))}
-          </div>
-          <button
-            onClick={() => setCurrent((c) => Math.min(total - 1, c + 1))}
-            disabled={current === total - 1}
-            className="w-11 h-11 rounded-full border border-black/10 bg-white flex items-center justify-center text-sm hover:border-[#c5a880] hover:text-[#c5a880] transition-all disabled:opacity-30"
-          >
-            →
-          </button>
-        </div>
-
-        <div className="text-center">
-          <Button
-            href="http://search.google.com/local/reviews?placeid=ChIJ6cu2eq3t9EcRgv3ak_zahtI"
-            variant="outline-gold"
-            external
-          >
-            {lang === "en" ? "Read all Google reviews" : "Lire tous les avis sur Google"}
-          </Button>
+            {lang === "en" ? "See all reviews on Google" : "Voir tous les avis sur Google"}
+          </a>
         </div>
       </div>
     </section>
