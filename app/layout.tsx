@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Drive Me Lyon",
-    images: [{ url: "/og/default.jpg" }],
+    images: [{ url: "/og/default.jpg", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
 };
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="min-h-screen flex flex-col bg-white antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
