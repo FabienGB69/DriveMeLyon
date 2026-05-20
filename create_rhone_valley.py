@@ -1,8 +1,8 @@
 import os
 import re
 
-source_file = '/Users/Gomi/.gemini/antigravity/worktrees/splendid-carson/rebrand-premium-wine-tours/beaujolais-wine-tour-from-lyon/index.html'
-target_dir = '/Users/Gomi/.gemini/antigravity/worktrees/splendid-carson/rebrand-premium-wine-tours/northern-rhone-valley-wine-tour-from-lyon'
+source_file = '/home/user/splendid-carson/beaujolais-wine-tour-from-lyon/index.html'
+target_dir = '/home/user/splendid-carson/northern-rhone-valley-wine-tour-from-lyon'
 target_file = os.path.join(target_dir, 'index.html')
 
 os.makedirs(target_dir, exist_ok=True)

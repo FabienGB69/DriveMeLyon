@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags for Subpage -->
+  <title class="lang-fr">Beaujolais Wine Tour depuis Lyon | Chauffeur Privé & Dégustation</title>
+  <title class="lang-en">Private Beaujolais Wine Tour from Lyon | Premium Chauffeur Service</title>
+  
+  <meta name="description" content="Réservez un circuit oenologique privé dans le Beaujolais depuis Lyon. Chauffeur bilingue, véhicule Mercedes premium, visites de domaines familiaux et dégustations sur-mesure." class="lang-fr">
+  <meta name="description" content="Book a private Beaujolais wine tour from Lyon. English-speaking chauffeur, premium Mercedes vehicle, exclusive family wineries, and bespoke wine tastings." class="lang-en">
+  
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://drivemelyon.com/beaujolais-wine-tour-from-lyon/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://drivemelyon.com/beaujolais-wine-tour-from-lyon/">
+  <meta property="og:title" content="Private Beaujolais Wine Tour from Lyon" class="lang-en">
+  <meta property="og:title" content="Beaujolais Wine Tour depuis Lyon Premium" class="lang-fr">
+  <meta property="og:description" content="Enjoy a private wine experience through the Beaujolais vineyards with hotel pickup, English-speaking chauffeur and a flexible itinerary." class="lang-en">
+  <meta property="og:description" content="Découvrez le Beaujolais avec un chauffeur privé bilingue. Prise en charge hôtel, véhicule Mercedes haut de gamme et itinéraire flexible." class="lang-fr">
+  <meta property="og:image" content="../assets/images/hero_wine_tour.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Specific styling for Subpage Elements */
+    .hero-subpage {
+      position: relative;
+      padding: 10rem 0 6rem 0;
+      background-color: var(--color-onyx);
+      color: var(--color-white);
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .hero-subpage-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .hero-subpage-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+    
+    .hero-subpage-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.4) 100%);
+    }
+    
+    .hero-subpage .container {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+    
+    /* Inclusions / Exclusions list split */
+    .inc-exc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3.5rem;
+    }
+    
+    .inc-box, .exc-box {
+      background-color: var(--color-white);
+      border-radius: var(--border-radius-sm);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+    
+    .inc-box {
+      border-top: 4px solid var(--color-gold);
+    }
+    
+    .exc-box {
+      border-top: 4px solid #EF4444;
+    }
+    
+    .inc-exc-title {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-onyx);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .inc-list, .exc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .inc-item, .exc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.925rem;
+    }
+    
+    .inc-item i {
+      color: var(--color-gold);
+      margin-top: 0.25rem;
+    }
+    
+    .exc-item i {
+      color: #EF4444;
+      margin-top: 0.25rem;
+    }
+
+    /* Timeline / Itinerary Example */
+    .timeline {
+      position: relative;
+      max-width: 750px;
+      margin: 3.5rem auto 0 auto;
+      padding: 1rem 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(197, 168, 128, 0.3);
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 55px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .timeline-badge {
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      width: 22px;
+      height: 22px;
+      border-radius: var(--border-radius-full);
+      background-color: var(--color-onyx);
+      border: 2px solid var(--color-gold);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+    
+    .timeline-item:hover .timeline-badge {
+      background-color: var(--color-gold);
+      transform: scale(1.15);
+    }
+    
+    .timeline-time {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    
+    .timeline-title {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-onyx);
+      margin-bottom: 0.5rem;
+    }
+    
+    .timeline-text {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    /* FAQ accordion specific styling */
+    .faq-grid {
+      max-width: 800px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .faq-item {
+      background-color: var(--color-white);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: var(--border-radius-sm);
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+    
+    .faq-item:hover {
+      border-color: rgba(197, 168, 128, 0.25);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .faq-trigger {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-onyx);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    
+    .faq-trigger i {
+      color: var(--color-gold);
+      transition: transform var(--transition-normal);
+    }
+    
+    .faq-item.active .faq-trigger i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+    
+    .faq-content-inner {
+      padding: 0 2rem 1.5rem 2rem;
+      font-size: 0.925rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      border-top: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 300px; /* Big enough for paragraph */
+    }
+
+    @media (max-width: 768px) {
+      .inc-exc-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="lang-en"> <!-- Default to English for international focus -->
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      
+      <!-- Logo -->
+      <a href="../index.html" class="logo" aria-label="Drive Me Lyon Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+          <text x="10" y="32" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="600" fill="#ffffff" letter-spacing="2">DRIVE ME LYON</text>
+          <text x="12" y="48" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#c5a880" letter-spacing="2.5">PRIVATE CHAUFFEUR & WINE TOURS</text>
+        </svg>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav" aria-label="Main Navigation">
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li>
+            <a href="../index.html" class="nav-link">
+              <span class="lang-fr">Accueil</span>
+              <span class="lang-en">Home</span>
+            </a>
+          </li>
+          <!-- Wine Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="../wine-tours/index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span class="lang-fr">Wine Tours <i class="fas fa-chevron-down"></i></span>
+              <span class="lang-en">Wine Tours <i class="fas fa-chevron-down"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../beaujolais-wine-tour-from-lyon/index.html" class="dropdown-link">
+                  <span class="lang-fr">Beaujolais</span>
+                  <span class="lang-en">Beaujolais</span>
+                </a>
+              </li>
+              <li>
+                <a href="../northern-rhone-valley-wine-tour-from-lyon/index.html" class="dropdown-link">
+                  <span class="lang-fr">Vallée du Rhône</span>
+                  <span class="lang-en">Rhône Valley</span>
+                </a>
+              </li>
+              <li>
+                <a href="../wine-tours/index.html" class="dropdown-link">
+                  <span class="lang-fr">Expérience sur mesure</span>
+                  <span class="lang-en">Custom Wine Experience</span>
+                </a>
+              </li>
+            </ul>
+      </nav>
+
+      <!-- Language Selector -->
+      <div class="nav-actions">
+        <div class="lang-switcher" role="navigation" aria-label="Language Selector">
+          <button class="lang-btn" id="lang-fr-btn" aria-label="Passer en Français">FR</button>
+          <button class="lang-btn" id="lang-en-btn" aria-label="Switch to English">EN</button>
+        </div>
+        <a href="#booking-cta" class="btn btn-outline-gold" style="padding: 0.65rem 1.25rem; font-size: 0.75rem;">
+          <span class="lang-fr">Devis Gratuit</span>
+          <span class="lang-en">Request Quote</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-subpage">
+    <div class="hero-subpage-bg">
+      <img src="../assets/images/hero_wine_tour.png" alt="Vineyard hills in Beaujolais" loading="eager">
+    </div>
+    
+    <div class="container">
+      <span class="section-tag" style="color: var(--color-gold);">
+        <span class="lang-fr">Excursion Viticole d'Exception</span>
+        <span class="lang-en">Bespoke Day Experience</span>
+      </span>
+      
+      <h1 class="hero-title" style="font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.2;">
+        <span class="lang-fr">Wine Tour Vallée du Rhône Nord depuis Lyon</span>
+        <span class="lang-en">Northern Rhône Valley Wine Tour from Lyon</span>
+      </h1>
+      
+      <p class="hero-subtitle" style="margin-left: auto; margin-right: auto; color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem; margin-bottom: 2.5rem;">
+        <span class="lang-fr">Profitez d'une excursion oenologique privée à travers les vignobles du Beaujolais avec prise en charge hôtel, chauffeur bilingue et itinéraire sur mesure.</span>
+        <span class="lang-en">Discover some of France’s most iconic wine appellations with a private chauffeur from Lyon: Côte-Rôtie, Condrieu, Saint-Joseph, Hermitage and Crozes-Hermitage.</span>
+      </p>
+      
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="#booking-cta" class="btn btn-primary">
+          <span class="lang-fr">Réserver mon circuit Beaujolais</span>
+          <span class="lang-en">Request a private Rhône Valley wine tour</span>
+        </a>
+        <a href="#booking-cta" class="btn btn-outline-light">
+          <span class="lang-fr">Demander la disponibilité</span>
+          <span class="lang-en">Request availability</span>
+        </a>
+        <a href="https://wa.me/33658593922" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       THE EXPERIENCE DETAILS
+       ========================================================================== -->
+  <section class="experiences-section" style="background-color: var(--color-cream);">
+    <div class="container">
+      
+      <div class="intl-grid" style="grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+        
+        <div>
+          <span class="section-tag">
+            <span class="lang-fr">Présentation de la journée</span>
+            <span class="lang-en">Unforgettable Journey</span>
+          </span>
+          <h2 class="section-title" style="text-align: left; font-size: 2.25rem;">
+            <span class="lang-fr">Une immersion oenologique privée et personnalisée</span>
+            <span class="lang-en">A private, tailormade wine adventure</span>
+          </h2>
+          <div style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; display: flex; flex-direction: column; gap: 1.25rem;">
+            <p class="lang-fr">
+              Échappez à l'agitation de Lyon pour une journée inoubliable au cœur du Beaujolais. Réputé pour ses collines ondulantes, ses villages médiévaux en pierres dorées et sa superbe diversité de cépages Gamay, le vignoble du Beaujolais offre une expérience oenologique pleine de charme et d'authenticité.
+            </p>
+            <p class="lang-fr">
+              Votre chauffeur privé bilingue vous accueillera directement à votre hôtel ou lieu de résidence à Lyon dans une berline ou un van Mercedes étincelant. Vous profiterez d'un itinéraire flexible, adapté à vos préférences, combinant visites de châteaux historiques, domaines familiaux intimistes et panoramas spectaculaires sur la vallée de la Saône.
+            </p>
+            <p class="lang-fr">
+              Cette formule est disponible en version <strong>demi-journée</strong> (4h) ou <strong>journée complète</strong> (8h), s'adaptant parfaitement aux contraintes de votre emploi du temps.
+            </p>
+            
+            <p class="lang-en">
+              Escape the hustle of Lyon for an unforgettable journey into the heart of the Beaujolais wine region. Renowned for its stunning rolling hills, golden-stone medieval villages, and highly expressive Gamay wines, Beaujolais offers a rich, scenic, and authentic wine tasting experience.
+            </p>
+            <p class="lang-en">
+              Your professional, English-speaking private chauffeur will pick you up directly from your hotel or residence in Lyon in an immaculate Mercedes sedan or van. You will enjoy a fully flexible, bespoke itinerary combining historic châteaux, boutique family-owned estates, and breath-taking panoramic viewpoints over the Saône Valley.
+            </p>
+            <p class="lang-en">
+              The tour is available as either a **half-day** (4-hour) or **full-day** (8-hour) experience, adapting perfectly to your travel schedules and pace.
+            </p>
+          </div>
+        </div>
+        
+        <div>
+          <!-- Visual Stack Card -->
+          <div class="glass-card" style="border-radius: var(--border-radius-sm); border-color: rgba(197, 168, 128, 0.2); box-shadow: var(--shadow-md);">
+            <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 600; color: var(--color-gold); margin-bottom: 1.25rem;">
+              <span class="lang-fr">Détails de l'excursion</span>
+              <span class="lang-en">Tour Highlights</span>
+            </h3>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem;">
+                <i class="fas fa-map-marker-alt" style="color: var(--color-gold); margin-top: 0.25rem;"></i>
+                <div>
+                  <strong>Departure:</strong>
+                  <span class="lang-fr">Lyon (Prise en charge hôtel/résidence incluse)</span>
+                  <span class="lang-en">Lyon (Complimentary hotel/residence pickup included)</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem;">
+                <i class="fas fa-clock" style="color: var(--color-gold); margin-top: 0.25rem;"></i>
+                <div>
+                  <strong>Duration:</strong>
+                  <span class="lang-fr">Demi-journée (4h) ou Journée complète (8h)</span>
+                  <span class="lang-en">Half-day (4h) or Full-day (8h) options available</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem;">
+                <i class="fas fa-user-friends" style="color: var(--color-gold); margin-top: 0.25rem;"></i>
+                <div>
+                  <strong>Capacity:</strong>
+                  <span class="lang-fr">De 1 à 7 personnes (Minibus disponible pour groupes plus importants)</span>
+                  <span class="lang-en">1 to 7 guests (Larger minibus capacity available on request)</span>
+                </div>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem;">
+                <i class="fas fa-wine-glass" style="color: var(--color-gold); margin-top: 0.25rem;"></i>
+                <div>
+                  <strong>Estates Visited:</strong>
+                  <span class="lang-fr">2 à 3 domaines familiaux sélectionnés (Dégustation de Crus)</span>
+                  <span class="lang-en">2 to 3 handpicked family estates (Cru tastings included)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       ITINERARY EXAMPLE (Full-Day Itinerary timeline)
+       ========================================================================== -->
+  <section class="intl-section" style="background-color: var(--color-white);">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="section-tag">
+          <span class="lang-fr">Exemple de Programme</span>
+          <span class="lang-en">Example Itinerary</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-fr">Votre journée type dans le Beaujolais</span>
+          <span class="lang-en">A typical full-day schedule</span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-fr">Voici une suggestion de déroulé pour une excursion d'une journée complète (8 heures).</span>
+          <span class="lang-en">Here is an example structure of a perfect full-day wine excursion (8 hours) starting from Lyon.</span>
+        </p>
+      </div>
+
+      <!-- Timeline Component -->
+      <div class="timeline">
+        
+        <!-- Step 1 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">09:00 AM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Départ de Lyon</span>
+            <span class="lang-en">Hotel pickup in Lyon</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Votre chauffeur privé bilingue vous retrouve devant votre hôtel ou résidence. Installation confortable dans notre véhicule premium Mercedes et route vers le nord.</span>
+            <span class="lang-en">Your English-speaking chauffeur meets you at your hotel entrance. Board our luxurious Mercedes vehicle for a relaxing, scenic drive heading north.</span>
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">09:45 AM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Route panoramique à travers les villages en Pierres Dorées</span>
+            <span class="lang-en">Scenic drive & golden-stone villages</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Visite des villages médiévaux pittoresques du sud du Beaujolais, souvent surnommé la "Petite Toscane", tels que Oingt ou Ternand. Arrêts photos panoramiques.</span>
+            <span class="lang-en">Cruise through the southern Beaujolais Golden Stones region, often called "Little Tuscany". Explore medieval gems like Oingt and capture stunning pictures.</span>
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">10:30 AM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Première visite de domaine & Dégustation</span>
+            <span class="lang-en">First winery visit & tasting</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Accueil chaleureux dans un domaine familial historique. Visite guidée des caves, explications sur les méthodes de vinification beaujolaise, puis dégustation commentée de plusieurs vins.</span>
+            <span class="lang-en">Step into a historic, family-run estate. Tour the traditional vaulted cellars, learn about local vinification techniques, and enjoy a curated tasting of fine Gamay wines.</span>
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">12:30 PM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Pause déjeuner gastronomique ou bistronomique</span>
+            <span class="lang-en">Lunch break or gastronomic stop</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Profitez d'un déjeuner typique dans un bistrot de pays ou une table gastronomique sélectionnée par votre guide. Partagez un repas accord mets & vins raffiné.</span>
+            <span class="lang-en">Enjoy a delicious traditional lunch at a local bistro or a high-end gastronomic restaurant recommended by Sanath. Savor local seasonal dishes paired with wines.</span>
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">02:30 PM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Second domaine viticole et arrêt au Mont Brouilly</span>
+            <span class="lang-en">Second winery & panoramic view</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Route vers le nord pour explorer les terroirs de crus (Morgon, Fleurie, Brouilly). Visite d'un second domaine viticole réputé, suivie d'un superbe arrêt panoramique au sommet du Mont Brouilly.</span>
+            <span class="lang-en">Head further north to explore prestigious Cru vineyards (Fleurie, Morgon). Tour a second top-rated estate for a tasting, and cap it off with amazing panoramas from Mont Brouilly.</span>
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <span class="timeline-time">05:00 PM</span>
+          <h3 class="timeline-title">
+            <span class="lang-fr">Retour à votre hôtel</span>
+            <span class="lang-en">Return journey to Lyon</span>
+          </h3>
+          <p class="timeline-text">
+            <span class="lang-fr">Trajet retour serein vers Lyon. Votre chauffeur privé vous dépose en toute sécurité directement devant l'entrée de votre hôtel ou lieu de séjour.</span>
+            <span class="lang-en">Relax as your chauffeur drives you comfortably back to Lyon. You are dropped off safely right at your hotel doorstep.</span>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 3.5rem;">
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); font-style: italic;">
+          <span class="lang-fr">* Note : L'itinéraire final s'adapte à la saison, à la disponibilité des domaines et à vos préférences personnelles.</span>
+          <span class="lang-en">* Note: The final itinerary depends entirely on winery availability, season, and your specific personal preferences.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       INCLUSIONS & EXCLUSIONS
+       ========================================================================== -->
+  <section class="experiences-section" style="background-color: var(--color-cream-dark);">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="section-tag">
+          <span class="lang-fr">Tarifs & Détails</span>
+          <span class="lang-en">Details & Pricing</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-fr">Ce qui est inclus dans votre prestation</span>
+          <span class="lang-en">What is included in the private tour</span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-fr">Nous offrons une transparence totale sur le coût de nos excursions haut de gamme.</span>
+          <span class="lang-en">We maintain total transparency regarding all tour inclusions and exclusions.</span>
+        </p>
+      </div>
+
+      <div class="inc-exc-grid">
+        
+        <!-- Inclusions Box -->
+        <div class="inc-box">
+          <h3 class="inc-exc-title"><i class="fas fa-check-circle"></i> What is included</h3>
+          <ul class="inc-list">
+            
+            <li class="inc-item">
+              <i class="fas fa-check"></i>
+              <div>
+                <strong>Private Chauffeur:</strong>
+                <span class="lang-fr">Chauffeur privé professionnel bilingue (français/anglais) dédié toute la journée.</span>
+                <span class="lang-en">Dedicated professional English-speaking chauffeur for the entire duration.</span>
+              </div>
+            </li>
+
+            <li class="inc-item">
+              <i class="fas fa-check"></i>
+              <div>
+                <strong>Mercedes Luxury Vehicle:</strong>
+                <span class="lang-fr">Transport en berline executive ou van Mercedes récent et parfaitement entretenu.</span>
+                <span class="lang-en">Transport in immaculate, recent Mercedes-Benz sedan or premium passenger van.</span>
+              </div>
+            </li>
+
+            <li class="inc-item">
+              <i class="fas fa-check"></i>
+              <div>
+                <strong>Hotel Pickup & Drop-off:</strong>
+                <span class="lang-fr">Prise en charge et retour gratuits depuis n'importe quel lieu à Lyon.</span>
+                <span class="lang-en">Complimentary pickup and drop-off from any hotel or residence in Lyon.</span>
+              </div>
+            </li>
+
+            <li class="inc-item">
+              <i class="fas fa-check"></i>
+              <div>
+                <strong>Flexible Itinerary:</strong>
+                <span class="lang-fr">Un parcours sur-mesure modulable selon vos goûts, votre rythme et vos demandes.</span>
+                <span class="lang-en">Fully adaptable, tailormade path based on your specific tasting tastes.</span>
+              </div>
+            </li>
+
+            <li class="inc-item">
+              <i class="fas fa-check"></i>
+              <div>
+                <strong>Amenities on Board:</strong>
+                <span class="lang-fr">Bouteilles d'eau rafraîchissantes, lingettes nettoyantes, chargeurs USB et Wi-Fi.</span>
+                <span class="lang-en">Complimentary bottled waters, refreshing wipes, phone chargers, and Wi-Fi.</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Exclusions Box -->
+        <div class="exc-box">
+          <h3 class="inc-exc-title" style="color: #EF4444;"><i class="fas fa-times-circle"></i> Not included</h3>
+          <ul class="exc-list">
+            
+            <li class="exc-item">
+              <i class="fas fa-times"></i>
+              <div>
+                <strong>Wine Tasting Fees:</strong>
+                <span class="lang-fr">Les frais de dégustation des domaines viticoles (comptez 10€ à 25€/pers, souvent offerts si vous achetez du vin).</span>
+                <span class="lang-en">Tasting fees payable directly to wineries (usually €10 to €25/person, often waived upon purchase).</span>
+              </div>
+            </li>
+
+            <li class="exc-item">
+              <i class="fas fa-times"></i>
+              <div>
+                <strong>Lunch & Meals:</strong>
+                <span class="lang-fr">Le coût du déjeuner ou des collations dans les restaurants locaux sélectionnés.</span>
+                <span class="lang-en">Cost of lunch, wine pairings, or gastronomic stops at the restaurants.</span>
+              </div>
+            </li>
+
+            <li class="exc-item">
+              <i class="fas fa-times"></i>
+              <div>
+                <strong>Personal Purchases:</strong>
+                <span class="lang-fr">Toutes vos dépenses personnelles, bouteilles de vins achetées aux domaines, souvenirs.</span>
+                <span class="lang-en">Personal purchases, wine cases shipped home, souvenirs, or extra activities.</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       VEHICLES FOCUS
+       ========================================================================== -->
+  <section class="fleet-section" style="background-color: var(--color-white);">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="section-tag">
+          <span class="lang-fr">Nos Véhicules Dédiés</span>
+          <span class="lang-en">Perfect For You</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-fr">Choisissez votre confort de voyage</span>
+          <span class="lang-en">Select your preferred luxury ride</span>
+        </h2>
+      </div>
+
+      <div class="fleet-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 3.5rem auto 0 auto;">
+        
+        <!-- Sedan -->
+        <article class="fleet-card">
+          <div class="fleet-icon"><i class="fas fa-car"></i></div>
+          <h3 class="fleet-name">Executive Sedan</h3>
+          <span class="fleet-class">Mercedes Classe E / S</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            <span class="lang-fr">Parfait pour les couples en escapade romantique ou les voyageurs d'affaires solos.</span>
+            <span class="lang-en">Perfect for couples on a romantic getaway or solo business travelers.</span>
+          </p>
+          <ul class="fleet-specs" style="border-top: 1px solid rgba(0, 0, 0, 0.05); padding-top: 1rem; width: 100%;">
+            <li class="fleet-spec-item">
+              <span>Capacity</span>
+              <strong>1 - 3 guests</strong>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Van -->
+        <article class="fleet-card" style="border-color: var(--color-gold); background-color: var(--color-gold-light);">
+          <div class="fleet-icon" style="background-color: var(--color-gold); color: var(--color-onyx);"><i class="fas fa-shuttle-van"></i></div>
+          <h3 class="fleet-name">Luxury Van</h3>
+          <span class="fleet-class">Mercedes Classe V</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            <span class="lang-fr">Le choix de prédilection des groupes d'amis, familles ou amateurs de vin. Salon luxueux.</span>
+            <span class="lang-en">The preferred selection for families, groups of friends or serious wine tasters.</span>
+          </p>
+          <ul class="fleet-specs" style="border-top: 1px solid rgba(0, 0, 0, 0.05); padding-top: 1rem; width: 100%;">
+            <li class="fleet-spec-item">
+              <span>Capacity</span>
+              <strong>4 - 7 guests</strong>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Minibus -->
+        <article class="fleet-card">
+          <div class="fleet-icon"><i class="fas fa-bus"></i></div>
+          <h3 class="fleet-name">Minibus</h3>
+          <span class="fleet-class">Large Groups</span>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+            <span class="lang-fr">Disponible sur demande spécifique pour les groupes d'entreprises, séminaires ou grands événements.</span>
+            <span class="lang-en">Available on custom request for corporate seminars, events, or very large groups.</span>
+          </p>
+          <ul class="fleet-specs" style="border-top: 1px solid rgba(0, 0, 0, 0.05); padding-top: 1rem; width: 100%;">
+            <li class="fleet-spec-item">
+              <span>Capacity</span>
+              <strong>8+ guests (On request)</strong>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       FAQ SECTION (Interactive Accordions)
+       ========================================================================== -->
+  <section class="reviews-section" style="background-color: var(--color-cream-dark);">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="section-tag">
+          <span class="lang-fr">Des Questions ?</span>
+          <span class="lang-en">Common Questions</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-fr">Questions fréquentes - Beaujolais Wine Tour</span>
+          <span class="lang-en">Frequently Asked Questions</span>
+        </h2>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="faq-grid">
+        
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">Le circuit peut-il se faire entièrement en anglais ?</span>
+              <span class="lang-en">Can the private wine tour be conducted in English?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Oui, absolument. Votre chauffeur privé bilingue parle couramment l'anglais. Il assurera la communication, vous guidera à travers l'histoire de la région viticole et facilitera toutes les interactions et traductions avec les viticulteurs locaux lors des visites.
+              </p>
+              <p class="lang-en">
+                Yes, absolutely. Your dedicated private chauffeur is fully bilingual and speaks fluent English. They will communicate clearly with you, outline the history of the wine region, and gladly handle all translations and conversations with the winery hosts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">Pouvons-nous réserver une excursion pour demain ?</span>
+              <span class="lang-en">Can we book a tour last-minute for tomorrow?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Nous conseillons généralement de réserver au moins quelques jours à l'avance pour pouvoir sécuriser les rendez-vous chez les vignerons les plus prisés. Néanmoins, pour les demandes urgentes de dernière minute, envoyez-nous un message direct sur WhatsApp (+33 6 58 59 39 22) et nous ferons notre possible pour vous trouver une disponibilité.
+              </p>
+              <p class="lang-en">
+                We strongly advise booking at least a few days in advance to secure reservations at top-tier wineries and vehicle availability. However, for urgent last-minute requests, please text us directly on WhatsApp (+33 6 58 59 39 22) and we will do our absolute best to accommodate you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">Les frais de dégustation sont-ils inclus ?</span>
+              <span class="lang-en">Are the winery wine tasting fees included in the price?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Non, les frais de dégustation ne sont pas compris dans le coût du transport. Comptez généralement entre 10€ et 25€ par personne selon les domaines. Ils sont à régler directement auprès des viticulteurs, et sont très régulièrement offerts en cas d'achat de bouteilles de vins sur place.
+              </p>
+              <p class="lang-en">
+                No, wine tasting fees are not included in the transport rate. Typically, tasting fees range from €10 to €25 per person depending on the wineries. They are payable directly to the wine estates on-site, and are very frequently waived if you purchase wine bottles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">L'itinéraire peut-il être personnalisé ?</span>
+              <span class="lang-en">Can our itinerary be fully customized to our tastes?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Tout à fait ! C'est le principal avantage d'une formule privée Drive Me Lyon. Si vous possédez déjà une liste de domaines viticoles spécifiques que vous rêvez de visiter, ou si vous préférez cibler certains styles (comme le Fleurie ou le Moulin-à-Vent), nous ajustons la route et les rendez-vous selon vos désirs.
+              </p>
+              <p class="lang-en">
+                Absolutely! This is the main benefit of booking a private tour with Drive Me Lyon. If you have specific estates you wish to visit, or want to focus on particular Crus (e.g. Fleurie, Moulin-à-Vent, Morgon), we will gladly customize the route and appointments to your preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">Proposez-vous la prise en charge directement à mon hôtel ?</span>
+              <span class="lang-en">Do you pick up passengers directly from hotels?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Oui, la prise en charge à l'hôtel, à votre Airbnb ou à toute autre adresse résidentielle à Lyon (et agglomération proche) est entièrement gratuite et incluse. Nous pouvons aussi vous prendre en charge ou vous déposer à la gare ou à l'aéroport sur simple demande préalable.
+              </p>
+              <p class="lang-en">
+                Yes, complimentary pickup and drop-off are included from any hotel, Airbnb, or private residence located in Lyon and its immediate surroundings. We can also coordinate pickups or drop-offs at train stations and Lyon Airport (LYS).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+            <span>
+              <span class="lang-fr">Pouvez-vous également organiser un Wine Tour dans la Vallée du Rhône ?</span>
+              <span class="lang-en">Can you arrange custom wine tours to the Rhône Valley too?</span>
+            </span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <p class="lang-fr">
+                Bien sûr ! Nous organisons également des excursions oenologiques d'exception dans la partie Nord de la Vallée du Rhône (Côte-Rôtie, Condrieu, Saint-Joseph, Hermitage). Il est même possible de réserver une formule sur plusieurs jours combinant le Beaujolais et la Vallée du Rhône.
+              </p>
+              <p class="lang-en">
+                Absolutely! We frequently organize bespoke wine tours to the Northern Rhône Valley, focusing on prestigious Crus like Côte-Rôtie, Condrieu, Saint-Joseph, and Hermitage. You can even combine both regions over a spectacular multi-day wine trip.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       FINAL CTA & CONTACT
+       ========================================================================== -->
+  <section class="booking-section" id="booking-cta">
+    <div class="container" style="display: block; max-width: 900px; margin: 0 auto; text-align: center;">
+      
+      <span class="section-tag" style="color: var(--color-gold);">
+        <span class="lang-fr">VOTRE DEVIS EN 15 MINUTES</span>
+        <span class="lang-en">REQUEST YOUR DEVIS</span>
+      </span>
+      
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); color: var(--color-white); margin-bottom: 1.5rem;">
+        <span class="lang-fr">Prêt à découvrir le Beaujolais depuis Lyon ?</span>
+        <span class="lang-en">Ready to discover Beaujolais from Lyon?</span>
+      </h2>
+      
+      <p style="color: var(--color-text-light-muted); font-size: 1rem; max-width: 650px; margin: 0 auto 3rem auto; line-height: 1.6;">
+        <span class="lang-fr">Contactez-nous aujourd'hui pour concevoir votre circuit viticole privé sur-mesure dans les collines du Beaujolais avec chauffeur haut de gamme.</span>
+        <span class="lang-en">Contact us today to design your bespoke, private wine tour through the beautiful hills of Beaujolais with premium chauffeur service.</span>
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 4rem;">
+        <a href="../index.html#booking" class="btn btn-primary" style="padding: 1.15rem 2.5rem;">
+          <span class="lang-fr"><i class="fas fa-wine-glass-alt"></i> Demander mon circuit privé</span>
+          <span class="lang-en"><i class="fas fa-wine-glass-alt"></i> Request private wine tour</span>
+        </a>
+        <a href="https://wa.me/33658593922" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 1.15rem 2.5rem;">
+          <i class="fab fa-whatsapp"></i> Chat WhatsApp
+        </a>
+      </div>
+
+      <!-- Quick backlink to Home page -->
+      <a href="../index.html" class="card-link" style="justify-content: center; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">
+        <i class="fas fa-arrow-left" style="margin-right: 0.5rem; margin-left: 0;"></i>
+        <span class="lang-fr">Retour à l'accueil</span>
+        <span class="lang-en">Back to Home page</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <div>
+          <div class="footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="200" height="42">
+              <text x="10" y="32" font-family="'Playfair Display', Georgia, serif" font-size="18" font-weight="600" fill="#ffffff" letter-spacing="2">DRIVE ME LYON</text>
+              <text x="12" y="48" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#c5a880" letter-spacing="2.5">PRIVATE CHAUFFEUR & WINE TOURS</text>
+            </svg>
+          </div>
+          <p class="footer-brand-text">
+            <span class="lang-fr">Société de chauffeurs privés premium à Lyon et sa région. Spécialiste des excursions et Wine Tours sur-mesure dans le Beaujolais et la Vallée du Rhône.</span>
+            <span class="lang-en">Premium private chauffeur service in Lyon and its region. Dedicated bespoke wine tours and airport transport with high-end Mercedes fleet.</span>
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/DRIVE-ME-LYON-VTC-172640863261840/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://fr.linkedin.com/in/sanath-sirimal-durage-0536b3162" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">
+            <span class="lang-fr">Nos Services</span>
+            <span class="lang-en">Our Services</span>
+          </h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Beaujolais Wine Tour</a></li>
+            <li><a href="../index.html#experiences" class="footer-link">Northern Rhône Wine Tour</a></li>
+            <li><a href="../index.html#experiences" class="footer-link">Airport Transfers (LYS)</a></li>
+            <li><a href="../index.html#experiences" class="footer-link">Business Travel & VIP</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">
+            <span class="lang-fr">L'Entreprise</span>
+            <span class="lang-en">Company</span>
+          </h4>
+          <ul class="footer-links">
+            <li><a href="../index.html" class="footer-link">Home</a></li>
+            <li><a href="../index.html#fleet" class="footer-link">Fleet</a></li>
+            <li><a href="../index.html#reviews" class="footer-link">Reviews</a></li>
+            <li><a href="#booking-cta" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+33658593922">+33 6 58 59 39 22</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp"></i>
+              <a href="https://wa.me/33658593922" target="_blank" rel="noopener">Chat WhatsApp</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:drivemelyon@yahoo.com">drivemelyon@yahoo.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <p>© 2026 Drive Me Lyon. All rights reserved.</p>
+        </div>
+        <div class="footer-legal-links">
+          <a href="../mentions-legales.html" class="footer-link">
+            <span class="lang-fr">Mentions Légales</span>
+            <span class="lang-en">Legal Notices</span>
+          </a>
+          <a href="../politique-de-confidentialite.html" class="footer-link">
+            <span class="lang-fr">Confidentialité</span>
+            <span class="lang-en">Privacy Policy</span>
+          </a>
+        </div>
+        <div>
+          <p style="font-size: 0.7rem;"><a href="https://kr-project.fr" target="_blank" rel="noopener" class="agency-link">Designed by Agence KR Project</a> & Rebranded Premium</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../app.js"></script>
+  
+  <script>
+    // Subpage Specific FAQ Accordion script logic
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('active');
+      
+      // Close all items
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      
+      // Toggle selected item
+      if (!isActive) {
+        item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+</body>
+</html>
