@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, hreflangMap } from "@/lib/seo";
 import { seoData } from "@/data/seo";
+import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
@@ -11,11 +13,26 @@ import { BookingCTA } from "@/components/sections/BookingCTA";
 export const metadata: Metadata = buildMetadata({
   ...seoData.en.chauffeur,
   path: "/en/private-chauffeur-lyon",
+  alternatesLang: hreflangMap["/en/private-chauffeur-lyon"],
 });
 
 export default function PrivateChauffeurLyonEN() {
+  const schemas = [
+    serviceSchema({
+      name: "Private Chauffeur Lyon",
+      description: seoData.en.chauffeur.description,
+      url: "/en/private-chauffeur-lyon",
+      serviceType: "Private Chauffeur",
+    }),
+    breadcrumbSchema([
+      { name: "Home", href: "/en" },
+      { name: "Private Chauffeur Lyon" },
+    ]),
+  ];
+
   return (
     <>
+      <JsonLd data={schemas} />
       <Header lang="en" />
       <main>
         <Hero

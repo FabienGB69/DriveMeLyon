@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, hreflangMap } from "@/lib/seo";
 import { seoData } from "@/data/seo";
+import { localBusinessSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
@@ -15,11 +17,13 @@ import { BookingCTA } from "@/components/sections/BookingCTA";
 export const metadata: Metadata = buildMetadata({
   ...seoData.fr.home,
   path: "/fr",
+  alternatesLang: hreflangMap["/fr"],
 });
 
 export default function FRHomePage() {
   return (
     <>
+      <JsonLd data={localBusinessSchema()} />
       <Header lang="fr" />
       <main>
         <Hero
