@@ -19,7 +19,7 @@ export function MobileStickyCTA({ lang = "en" }: { lang?: "en" | "fr" }) {
       <a
         href="https://wa.me/33658593922"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white text-sm font-semibold py-3 rounded-sm"
       >
         WhatsApp
