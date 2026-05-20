@@ -1,23 +1,29 @@
 {
-  "name": "drive-me-lyon",
-  "version": "1.0.0",
-  "description": "Drive Me Lyon - Premium Private Chauffeur & Wine Tours from Lyon",
+  "name": "drivemelyon",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "node build.js",
-    "dev": "node build.js",
-    "prebuild": "node -e \"const fs=require('fs');if(!fs.existsSync('dist'))fs.mkdirSync('dist');\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "keywords": [
-    "chauffeur",
-    "wine-tours",
-    "lyon"
-  ],
-  "author": "Drive Me Lyon",
-  "license": "MIT",
   "dependencies": {
-    "@vercel/analytics": "^2.0.1"
+    "@vercel/analytics": "^2.0.1",
+    "clsx": "^2.1.1",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
-    "esbuild": "^0.28.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

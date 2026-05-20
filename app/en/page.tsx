@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import { buildMetadata, hreflangMap } from "@/lib/seo";
+import { seoData } from "@/data/seo";
+import { localBusinessSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/JsonLd";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
+import { Hero } from "@/components/sections/Hero";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { SignatureExperiences } from "@/components/sections/SignatureExperiences";
+import { WineRegions } from "@/components/sections/WineRegions";
+import { InternationalClients } from "@/components/sections/InternationalClients";
+import { Fleet } from "@/components/sections/Fleet";
+import { BookingCTA } from "@/components/sections/BookingCTA";
+
+export const metadata: Metadata = buildMetadata({
+  ...seoData.en.home,
+  path: "/en",
+  alternatesLang: hreflangMap["/en"],
+});
+
+export default function ENHomePage() {
+  return (
+    <>
+      <JsonLd data={localBusinessSchema()} />
+      <Header lang="en" />
+      <main>
+        <Hero
+          lang="en"
+          title="Private chauffeur & wine tours from Lyon"
+          subtitle="Premium airport transfers, business travel and private wine tours in Beaujolais and the Rhône Valley with an English-speaking chauffeur."
+          ctaPrimary={{ label: "Book a wine tour", href: "/en/wine-tours" }}
+          ctaSecondary={{ label: "Request a transfer", href: "/en/contact" }}
+        />
+        <GoogleReviews lang="en" />
+        <SignatureExperiences lang="en" />
+        <WineRegions lang="en" />
+        <InternationalClients lang="en" />
+        <Fleet lang="en" />
+        <BookingCTA lang="en" />
+      </main>
+      <Footer lang="en" />
+      <MobileStickyCTA lang="en" />
+    </>
+  );
+}
