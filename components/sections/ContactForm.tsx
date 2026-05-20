@@ -90,14 +90,14 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
     <section className="py-24 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="mb-12 text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">Drive Me Lyon</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">Drive Me Lyon</span>
           <h1 className="font-serif text-4xl text-white mb-4">{copy.heading}</h1>
           <p className="text-white/60 text-sm">{copy.subheading}</p>
         </div>
 
         {status === "success" ? (
-          <div className="border border-[#c5a880]/30 bg-[#c5a880]/8 rounded-sm p-8 text-center">
-            <p className="text-[#c5a880] font-semibold mb-2">✓</p>
+          <div className="border border-[#C6A15B]/30 bg-[#C6A15B]/8 rounded-sm p-8 text-center">
+            <p className="text-[#C6A15B] font-semibold mb-2">✓</p>
             <p className="text-white/80 text-sm">{copy.success}</p>
           </div>
         ) : (
@@ -109,7 +109,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                   name="name"
                   type="text"
                   required
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#C6A15B]/60"
                 />
               </div>
               <div>
@@ -118,7 +118,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                   name="email"
                   type="email"
                   required
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#C6A15B]/60"
                 />
               </div>
             </div>
@@ -129,7 +129,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                 <input
                   name="phone"
                   type="tel"
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#C6A15B]/60"
                 />
               </div>
               <div>
@@ -139,7 +139,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                   type="number"
                   min="1"
                   max="8"
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#C6A15B]/60"
                 />
               </div>
             </div>
@@ -150,11 +150,11 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                 <select
                   name="service"
                   required
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-[#C6A15B]/60"
                 >
-                  <option value="" className="bg-[#0a0a0a]">{copy.servicePlaceholder}</option>
+                  <option value="" className="bg-[#080808]">{copy.servicePlaceholder}</option>
                   {copy.services.map((s) => (
-                    <option key={s} value={s} className="bg-[#0a0a0a]">{s}</option>
+                    <option key={s} value={s} className="bg-[#080808]">{s}</option>
                   ))}
                 </select>
               </div>
@@ -163,7 +163,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                 <input
                   name="date"
                   type="date"
-                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-[#c5a880]/60"
+                  className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-[#C6A15B]/60"
                 />
               </div>
             </div>
@@ -174,7 +174,7 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
                 name="message"
                 rows={4}
                 placeholder={copy.messagePlaceholder}
-                className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#c5a880]/60 resize-none"
+                className="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-[#C6A15B]/60 resize-none"
               />
             </div>
 
@@ -185,14 +185,14 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full bg-[#c5a880] text-[#0a0a0a] font-semibold text-sm uppercase tracking-widest py-4 rounded-sm hover:bg-[#d4b990] transition-colors disabled:opacity-60"
+              className="w-full bg-[#C6A15B] text-[#080808] font-semibold text-sm uppercase tracking-widest py-4 rounded-sm hover:bg-[#d4b990] transition-colors disabled:opacity-60"
             >
               {status === "sending" ? copy.sending : copy.submit}
             </button>
 
             <p className="text-center text-white/40 text-xs pt-2">
               {copy.whatsapp}{" "}
-              <a href="https://wa.me/33658593922" className="text-[#c5a880] hover:underline">WhatsApp</a>
+              <a href="https://wa.me/33658593922" className="text-[#C6A15B] hover:underline">WhatsApp</a>
             </p>
           </form>
         )}

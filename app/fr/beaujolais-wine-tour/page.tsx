@@ -30,19 +30,19 @@ export default function BeaujolaisWineTourFR() {
           ctaSecondary={{ label: "Consulter les disponibilités", href: "/fr/contact" }}
         />
 
-        <section className="bg-[#faf9f6] py-24">
+        <section className="bg-[#F7F3EA] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">Pourquoi choisir le Beaujolais</span>
-                <h2 className="font-serif text-4xl text-[#0a0a0a] mb-6">Une expérience viticole authentique aux portes de Lyon</h2>
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">Pourquoi choisir le Beaujolais</span>
+                <h2 className="font-serif text-4xl text-[#080808] mb-6">Une expérience viticole authentique aux portes de Lyon</h2>
                 <div className="space-y-4 text-gray-500 text-sm leading-relaxed">
                   <p>À seulement 40 minutes de Lyon, le Beaujolais est l'une des régions viticoles les plus attachantes de France. Ses villages pittoresques, ses châteaux et ses domaines familiaux offrent une expérience authentique loin du tourisme de masse.</p>
                   <p>Votre chauffeur anglophone vous guidera à travers les Crus du Beaujolais — Morgon, Moulin-à-Vent, Fleurie — avec des visites de domaines triés sur le volet et des dégustations commentées en français et en anglais.</p>
                 </div>
               </div>
-              <div className="bg-white rounded-sm border border-[#c5a880]/20 shadow-md p-8">
-                <h3 className="font-sans font-semibold text-[#c5a880] mb-5">Points forts de l&apos;excursion</h3>
+              <div className="bg-white rounded-sm border border-[#C6A15B]/20 shadow-md p-8">
+                <h3 className="font-sans font-semibold text-[#C6A15B] mb-5">Points forts de l&apos;excursion</h3>
                 <ul className="space-y-4 text-sm text-gray-600">
                   {[
                     ["Départ", "Lyon (prise en charge à l'hôtel incluse)"],
@@ -51,8 +51,8 @@ export default function BeaujolaisWineTourFR() {
                     ["Cépage", "Gamay Noir"],
                   ].map(([label, value]) => (
                     <li key={label} className="flex gap-3">
-                      <span className="text-[#c5a880] mt-0.5">→</span>
-                      <div><strong className="text-[#0a0a0a]">{label} :</strong> {value}</div>
+                      <span className="text-[#C6A15B] mt-0.5">→</span>
+                      <div><strong className="text-[#080808]">{label} :</strong> {value}</div>
                     </li>
                   ))}
                 </ul>

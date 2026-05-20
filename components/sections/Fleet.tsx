@@ -10,10 +10,10 @@ export function Fleet({ lang = "en" }: FleetProps) {
     <section className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
             {lang === "en" ? "Our Premium Fleet" : "Véhicules Haut de Gamme"}
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#0a0a0a] mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#080808] mb-4">
             {lang === "en" ? "Experience absolute comfort & elegance" : "Voyagez dans un confort absolu"}
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
@@ -30,27 +30,27 @@ export function Fleet({ lang = "en" }: FleetProps) {
               className={cn(
                 "rounded-sm border p-7 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg",
                 v.highlight
-                  ? "border-[#c5a880] bg-[#c5a880]/5"
-                  : "border-black/4 bg-[#faf9f6] hover:bg-white hover:border-[#c5a880]/25"
+                  ? "border-[#C6A15B] bg-[#C6A15B]/5"
+                  : "border-black/4 bg-[#F7F3EA] hover:bg-white hover:border-[#C6A15B]/25"
               )}
             >
               <div
                 className={cn(
                   "w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-5 border transition-all",
                   v.highlight
-                    ? "bg-[#c5a880] text-[#0a0a0a] border-[#c5a880]"
-                    : "bg-white text-[#c5a880] border-[#c5a880]/20"
+                    ? "bg-[#C6A15B] text-[#080808] border-[#C6A15B]"
+                    : "bg-white text-[#C6A15B] border-[#C6A15B]/20"
                 )}
               >
                 🚗
               </div>
-              <h3 className="font-sans font-semibold text-lg text-[#0a0a0a] mb-1">{v.name}</h3>
-              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#c5a880] mb-4">{v.class}</span>
+              <h3 className="font-sans font-semibold text-lg text-[#080808] mb-1">{v.name}</h3>
+              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#C6A15B] mb-4">{v.class}</span>
               <ul className="w-full border-t border-black/6 pt-4 space-y-2">
                 {v.specs.map((s) => (
                   <li key={s.label} className="flex justify-between text-xs text-gray-500">
                     <span>{s.label}</span>
-                    <strong className="text-[#0a0a0a] font-medium">{s.value}</strong>
+                    <strong className="text-[#080808] font-medium">{s.value}</strong>
                   </li>
                 ))}
               </ul>

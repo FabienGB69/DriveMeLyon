@@ -14,7 +14,7 @@ export default function ContactEN() {
   return (
     <>
       <Header lang="en" />
-      <main className="bg-[#0a0a0a] min-h-screen pt-20">
+      <main className="bg-[#080808] min-h-screen pt-20">
         <ContactForm lang="en" />
       </main>
       <Footer lang="en" />

@@ -25,15 +25,15 @@ export function InternationalClients({ lang = "en" }: InternationalClientsProps)
   const items = proofs[lang];
 
   return (
-    <section className="bg-[#faf9f6] py-24">
+    <section className="bg-[#F7F3EA] py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: headline */}
           <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
               {lang === "en" ? "Who We Serve" : "Pour qui"}
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#0a0a0a] leading-tight mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#080808] leading-tight mb-6">
               {lang === "en"
                 ? "Designed for international guests, hotels, private groups and business travelers."
                 : "Conçu pour les voyageurs internationaux, hôtels, groupes privés et voyageurs d'affaires."}
@@ -50,11 +50,11 @@ export function InternationalClients({ lang = "en" }: InternationalClientsProps)
             {items.map((item) => (
               <div
                 key={item.title}
-                className="bg-white border border-black/[0.05] rounded-sm p-5 flex gap-4 hover:border-[#c5a880]/30 transition-colors"
+                className="bg-white border border-black/[0.05] rounded-sm p-5 flex gap-4 hover:border-[#C6A15B]/30 transition-colors"
               >
                 <span className="text-2xl flex-shrink-0 leading-none mt-0.5">{item.icon}</span>
                 <div>
-                  <h3 className="font-semibold text-[#0a0a0a] text-sm mb-1">{item.title}</h3>
+                  <h3 className="font-semibold text-[#080808] text-sm mb-1">{item.title}</h3>
                   <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
                 </div>
               </div>

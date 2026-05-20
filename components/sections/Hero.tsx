@@ -21,7 +21,7 @@ export function Hero({
   ctaSecondary,
 }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#080808] overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,13 +32,13 @@ export function Hero({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/40 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 text-white">
         {/* Trust widget */}
-        <div className="inline-flex items-center gap-3 border border-[#c5a880]/20 bg-[#c5a880]/8 px-4 py-2 rounded-sm mb-8">
-          <div className="flex text-[#c5a880] text-sm">{"★".repeat(5)}</div>
+        <div className="inline-flex items-center gap-3 border border-[#C6A15B]/20 bg-[#C6A15B]/8 px-4 py-2 rounded-sm mb-8">
+          <div className="flex text-[#C6A15B] text-sm">{"★".repeat(5)}</div>
           <span className="text-xs font-semibold uppercase tracking-widest">
             {lang === "en" ? "Rated 5/5 by our guests" : "Noté 5/5 par nos clients"}
           </span>

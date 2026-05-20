@@ -14,9 +14,9 @@ interface ButtonProps {
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-[#c5a880] text-[#0a0a0a] border border-[#c5a880] hover:bg-[#b1936c] hover:border-[#b1936c]",
+    "bg-[#C6A15B] text-[#080808] border border-[#C6A15B] hover:bg-[#b1936c] hover:border-[#b1936c]",
   "outline-gold":
-    "bg-transparent text-[#c5a880] border border-[#c5a880] hover:bg-[#c5a880]/10",
+    "bg-transparent text-[#C6A15B] border border-[#C6A15B] hover:bg-[#C6A15B]/10",
   "outline-light":
     "bg-transparent text-white border border-white/30 hover:bg-white/10 hover:border-white",
   whatsapp:

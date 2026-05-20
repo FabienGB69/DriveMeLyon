@@ -43,10 +43,10 @@ export function WineRegions({ lang = "en" }: WineRegionsProps) {
   const r = regions.rhone;
 
   return (
-    <section className="bg-[#0a0a0a] py-24">
+    <section className="bg-[#080808] py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-3 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
             {lang === "en" ? "Wine Regions" : "Vignobles"}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
@@ -70,10 +70,10 @@ export function WineRegions({ lang = "en" }: WineRegionsProps) {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/40 to-transparent" />
             </div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#c5a880] bg-[#c5a880]/15 border border-[#c5a880]/30 px-3 py-1 rounded-full self-start mb-4">
+              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#C6A15B] bg-[#C6A15B]/15 border border-[#C6A15B]/30 px-3 py-1 rounded-full self-start mb-4">
                 {b.tag[lang]}
               </span>
               <h3 className="font-serif text-3xl text-white mb-3">{b.title}</h3>
@@ -87,7 +87,7 @@ export function WineRegions({ lang = "en" }: WineRegionsProps) {
               </div>
               <Link
                 href={b.cta[lang].href}
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c5a880] hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C6A15B] hover:gap-4 transition-all"
               >
                 {b.cta[lang].label} →
               </Link>
@@ -104,10 +104,10 @@ export function WineRegions({ lang = "en" }: WineRegionsProps) {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/40 to-transparent" />
             </div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#c5a880] bg-[#c5a880]/15 border border-[#c5a880]/30 px-3 py-1 rounded-full self-start mb-4">
+              <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#C6A15B] bg-[#C6A15B]/15 border border-[#C6A15B]/30 px-3 py-1 rounded-full self-start mb-4">
                 {r.tag[lang]}
               </span>
               <h3 className="font-serif text-3xl text-white mb-3">
@@ -123,7 +123,7 @@ export function WineRegions({ lang = "en" }: WineRegionsProps) {
               </div>
               <Link
                 href={r.cta[lang].href}
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#c5a880] hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C6A15B] hover:gap-4 transition-all"
               >
                 {r.cta[lang].label} →
               </Link>

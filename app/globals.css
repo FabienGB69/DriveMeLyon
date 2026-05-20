@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-onyx: #0a0a0a;
-  --color-gold: #c5a880;
-  --color-gold-hover: #b1936c;
-  --color-cream: #faf9f6;
-  --color-cream-dark: #f3f1eb;
+  --color-onyx: #080808;
+  --color-anthracite: #171717;
+  --color-gold: #C6A15B;
+  --color-gold-hover: #b38e4a;
+  --color-cream: #F7F3EA;
+  --color-cream-dark: #EDE8DC;
+  --color-bordeaux: #5A1F2B;
+  --color-text-muted: #A3A3A3;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-serif: var(--font-playfair), Georgia, serif;
 }

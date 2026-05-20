@@ -17,9 +17,9 @@ export function BookingCTA({ lang = "en", title, subtitle }: BookingCTAProps) {
       : "Contactez-nous pour concevoir votre circuit viticole ou transfert premium sur-mesure. Réponse rapide garantie.";
 
   return (
-    <section className="bg-[#0a0a0a] py-24">
+    <section className="bg-[#080808] py-24">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <span className="text-xs font-semibold uppercase tracking-widest text-[#c5a880] mb-4 block">
+        <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-4 block">
           {lang === "en" ? "Your quote in 15 minutes" : "Votre devis en 15 minutes"}
         </span>
         <h2 className="font-serif text-4xl md:text-5xl text-white mb-5">

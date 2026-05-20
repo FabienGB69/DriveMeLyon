@@ -42,7 +42,7 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 h-20 ${
         scrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#c5a880]/15 shadow-md"
+          ? "bg-[#080808]/95 backdrop-blur-md border-b border-[#C6A15B]/15 shadow-md"
           : ""
       }`}
     >
@@ -72,7 +72,7 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
               fontFamily="'Inter', sans-serif"
               fontSize="7.5"
               fontWeight="600"
-              fill="#c5a880"
+              fill="#C6A15B"
               letterSpacing="2.5"
             >
               PRIVATE CHAUFFEUR & WINE TOURS
@@ -91,12 +91,12 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <ul className="absolute top-full left-0 mt-2 w-56 bg-[#0a0a0a]/95 backdrop-blur-md border border-[#c5a880]/15 rounded-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0">
+                <ul className="absolute top-full left-0 mt-2 w-56 bg-[#080808]/95 backdrop-blur-md border border-[#C6A15B]/15 rounded-sm shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0">
                   {item.children.map((child) => (
                     <li key={child.href}>
                       <Link
                         href={child.href}
-                        className="block px-5 py-3 text-sm text-white/80 hover:text-[#c5a880] hover:bg-[#c5a880]/5 transition-colors"
+                        className="block px-5 py-3 text-sm text-white/80 hover:text-[#C6A15B] hover:bg-[#C6A15B]/5 transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -120,7 +120,7 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             href={`/${oppositeLang}`}
-            className="text-xs font-semibold uppercase tracking-widest text-white/60 hover:text-white border border-[#c5a880]/30 rounded-full px-3 py-1 transition-colors"
+            className="text-xs font-semibold uppercase tracking-widest text-white/60 hover:text-white border border-[#C6A15B]/30 rounded-full px-3 py-1 transition-colors"
           >
             {oppositeLang.toUpperCase()}
           </Link>
@@ -143,7 +143,7 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#0a0a0a] border-t border-[#c5a880]/15 px-6 py-6 flex flex-col gap-4">
+        <div className="lg:hidden bg-[#080808] border-t border-[#C6A15B]/15 px-6 py-6 flex flex-col gap-4">
           {nav.map((item) => (
             <div key={item.label}>
               <Link
@@ -159,7 +159,7 @@ export function Header({ lang = "en" }: { lang?: "en" | "fr" }) {
                     <li key={child.href}>
                       <Link
                         href={child.href}
-                        className="text-sm text-white/60 hover:text-[#c5a880]"
+                        className="text-sm text-white/60 hover:text-[#C6A15B]"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}

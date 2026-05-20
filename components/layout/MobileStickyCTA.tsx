@@ -15,7 +15,7 @@ export function MobileStickyCTA({ lang = "en" }: { lang?: "en" | "fr" }) {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 md:hidden flex gap-2 p-3 bg-[#0a0a0a]/95 backdrop-blur border-t border-[#c5a880]/15">
+    <div className="fixed bottom-0 inset-x-0 z-40 md:hidden flex gap-2 p-3 bg-[#080808]/95 backdrop-blur border-t border-[#C6A15B]/15">
       <a
         href="https://wa.me/33658593922"
         target="_blank"
@@ -26,7 +26,7 @@ export function MobileStickyCTA({ lang = "en" }: { lang?: "en" | "fr" }) {
       </a>
       <Link
         href={`/${lang}/contact`}
-        className="flex-1 flex items-center justify-center bg-[#c5a880] text-[#0a0a0a] text-sm font-semibold py-3 rounded-sm"
+        className="flex-1 flex items-center justify-center bg-[#C6A15B] text-[#080808] text-sm font-semibold py-3 rounded-sm"
       >
         {lang === "en" ? "Request Quote" : "Devis Gratuit"}
       </Link>
