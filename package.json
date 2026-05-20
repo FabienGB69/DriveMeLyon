@@ -1,0 +1,23 @@
+{
+  "name": "drive-me-lyon",
+  "version": "1.0.0",
+  "description": "Drive Me Lyon - Premium Private Chauffeur & Wine Tours from Lyon",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js",
+    "prebuild": "node -e \"const fs=require('fs');if(!fs.existsSync('dist'))fs.mkdirSync('dist');\""
+  },
+  "keywords": [
+    "chauffeur",
+    "wine-tours",
+    "lyon"
+  ],
+  "author": "Drive Me Lyon",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
