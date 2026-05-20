@@ -102,6 +102,8 @@ export function ContactForm({ lang = "en" }: ContactFormProps) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Honeypot — hidden from real users, catches bots */}
+            <input name="_gotcha" type="text" tabIndex={-1} aria-hidden="true" className="hidden" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-xs uppercase tracking-widest text-white/50 mb-2">{copy.name}</label>

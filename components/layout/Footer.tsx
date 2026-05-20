@@ -32,8 +32,8 @@ export function Footer({ lang = "en" }: { lang?: "en" | "fr" }) {
                 : "Service de chauffeur privé premium à Lyon. Wine Tours sur-mesure et transferts aéroport avec flotte Mercedes haut de gamme."}
             </p>
             <div className="flex gap-3">
-              <a href="https://www.facebook.com/DRIVE-ME-LYON-VTC-172640863261840/" target="_blank" rel="noopener" className="w-9 h-9 flex items-center justify-center rounded-sm border border-white/5 text-white/60 hover:text-[#C6A15B] hover:border-[#C6A15B] transition-all">f</a>
-              <a href="https://fr.linkedin.com/in/sanath-sirimal-durage-0536b3162" target="_blank" rel="noopener" className="w-9 h-9 flex items-center justify-center rounded-sm border border-white/5 text-white/60 hover:text-[#C6A15B] hover:border-[#C6A15B] transition-all">in</a>
+              <a href="https://www.facebook.com/DRIVE-ME-LYON-VTC-172640863261840/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-sm border border-white/5 text-white/60 hover:text-[#C6A15B] hover:border-[#C6A15B] transition-all">f</a>
+              <a href="https://fr.linkedin.com/in/sanath-sirimal-durage-0536b3162" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-sm border border-white/5 text-white/60 hover:text-[#C6A15B] hover:border-[#C6A15B] transition-all">in</a>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export function Footer({ lang = "en" }: { lang?: "en" | "fr" }) {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white border-l-2 border-[#C6A15B] pl-3 mb-5">Contact</h4>
             <ul className="space-y-4">
               <li><a href="tel:+33658593922" className="hover:text-white transition-colors">+33 6 58 59 39 22</a></li>
-              <li><a href="https://wa.me/33658593922" target="_blank" rel="noopener" className="hover:text-white transition-colors">Chat WhatsApp</a></li>
+              <li><a href="https://wa.me/33658593922" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Chat WhatsApp</a></li>
               <li><a href="mailto:drivemelyon@yahoo.com" className="hover:text-white transition-colors">drivemelyon@yahoo.com</a></li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export function Footer({ lang = "en" }: { lang?: "en" | "fr" }) {
             <Link href="/mentions-legales" className="hover:text-white transition-colors">Legal Notices</Link>
             <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Privacy Policy</Link>
           </div>
-          <a href="https://kr-project.fr" target="_blank" rel="noopener" className="text-white/30 hover:text-white transition-colors">Designed by Agence KR Project</a>
+          <a href="https://kr-project.fr" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors">Designed by Agence KR Project</a>
         </div>
       </div>
     </footer>
