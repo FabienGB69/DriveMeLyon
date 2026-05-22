@@ -7,12 +7,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { Hero } from "@/components/sections/Hero";
-import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { ProofBlock } from "@/components/sections/ProofBlock";
+import { WineToursHub } from "@/components/sections/WineToursHub";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { TrustedBy } from "@/components/sections/TrustedBy";
-import { SignatureExperiences } from "@/components/sections/SignatureExperiences";
-import { WineRegions } from "@/components/sections/WineRegions";
-import { InternationalClients } from "@/components/sections/InternationalClients";
-import { Fleet } from "@/components/sections/Fleet";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { QuickContact } from "@/components/sections/QuickContact";
 import { BookingCTA } from "@/components/sections/BookingCTA";
 
 export const metadata: Metadata = buildMetadata({
@@ -29,17 +29,17 @@ export default function FRHomePage() {
       <main>
         <Hero
           lang="fr"
-          title="Chauffeur privé & Wine Tours premium depuis Lyon"
-          subtitle="Transferts aéroport premium, déplacements professionnels et excursions privées dans le Beaujolais et la Vallée du Rhône avec chauffeur anglophone et véhicule Mercedes."
-          ctaPrimary={{ label: "Réserver un Wine Tour", href: "/fr/wine-tours" }}
-          ctaSecondary={{ label: "Demander un transfert", href: "/fr/contact" }}
+          title="Chauffeur privé premium & Wine Tours depuis Lyon"
+          subtitle="Beaujolais, Vallée du Rhône, Bourgogne, transferts aéroport et événements privés — avec chauffeur anglophone et véhicule Mercedes."
+          ctaPrimary={{ label: "Réserver un chauffeur", href: "/fr/contact" }}
+          ctaSecondary={{ label: "Découvrir les Wine Tours", href: "/fr/wine-tours-lyon" }}
         />
-        <GoogleReviews lang="fr" />
+        <ProofBlock lang="fr" />
+        <WineToursHub lang="fr" />
+        <ServicesGrid lang="fr" />
         <TrustedBy lang="fr" />
-        <SignatureExperiences lang="fr" />
-        <WineRegions lang="fr" />
-        <InternationalClients lang="fr" />
-        <Fleet lang="fr" />
+        <GoogleReviews lang="fr" />
+        <QuickContact lang="fr" />
         <BookingCTA lang="fr" />
       </main>
       <Footer lang="fr" />

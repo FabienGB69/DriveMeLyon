@@ -79,8 +79,12 @@ export function Footer({ lang = "en" }: { lang?: "en" | "fr" }) {
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
           <p>© 2026 Drive Me Lyon. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/mentions-legales" className="hover:text-white transition-colors">Legal Notices</Link>
-            <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href={`/${lang}/mentions-legales`} className="hover:text-white transition-colors">
+              {lang === "en" ? "Legal Notices" : "Mentions légales"}
+            </Link>
+            <Link href={`/${lang}/politique-de-confidentialite`} className="hover:text-white transition-colors">
+              {lang === "en" ? "Privacy Policy" : "Politique de confidentialité"}
+            </Link>
           </div>
           <a href="https://kr-project.fr" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white transition-colors">Designed by Agence KR Project</a>
         </div>

@@ -18,7 +18,7 @@ const bookingPlatforms = [
   },
   {
     name: "Booking.com",
-    href: "https://www.booking.com/hotel/fr/quiet-apartment-in-tassin-parking-lyon-bus.fr.html?label=gen173bo-10CAsoTUIqcXVpZXQtYXBhcnRtZW50LWluLXRhc3Npbi1wYXJraW5nLWx5b24tYnVzSDNYA2hNiAEBmAEzuAEHyAEM2AED6AEB-AEBiAIBmAIGqAIBuALuv5bQBsACAdICJDY2YmYwMjk5LThjOWMtNGUwNi04YjcwLWY4OWEyOTE2YjZjZNgCAeACAQ&sid=a88aca115a818d18427f245c6b3defd3&dist=0&sb_price_type=total&type=total&",
+    href: "https://www.booking.com/hotel/fr/quiet-apartment-in-tassin-parking-lyon-bus.fr.html",
     labelEn: "Available on Booking.com",
     labelFr: "Disponible sur Booking.com",
     color: "#003580",
