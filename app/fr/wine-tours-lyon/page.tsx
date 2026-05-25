@@ -1,84 +1,121 @@
 import type { Metadata } from "next";
 import { buildMetadata, hreflangMap } from "@/lib/seo";
-import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { serviceSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { Hero } from "@/components/sections/Hero";
 import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
+import { FAQSection } from "@/components/sections/FAQ";
 import { BookingCTA } from "@/components/sections/BookingCTA";
-import { FadeIn } from "@/components/ui/FadeIn";
+import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/FadeIn";
+import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = buildMetadata({
   title: "Wine Tours Lyon | Beaujolais, Vallée du Rhône & Bourgogne en Privé",
   description:
-    "Excursions viticoles privées depuis Lyon vers le Beaujolais, la Vallée du Rhône et la Bourgogne. Chauffeur bilingue, véhicule Mercedes, itinéraire sur mesure.",
+    "Réservez un wine tour privé depuis Lyon — Beaujolais, Vallée du Rhône Nord ou Bourgogne. Chauffeur anglophone, Mercedes, prise en charge hôtel, aide aux réservations domaines.",
   path: "/fr/wine-tours-lyon",
   alternatesLang: hreflangMap["/fr/wine-tours-lyon"],
 });
 
-const tours = [
+const includes = [
+  {
+    title: "Prise en charge hôtel",
+    desc: "Depuis tout hôtel, Airbnb ou résidence à Lyon",
+  },
+  {
+    title: "Chauffeur anglophone",
+    desc: "Chauffeur-guide bilingue pour toute la durée",
+  },
+  {
+    title: "Réservations domaines",
+    desc: "Nous réservons les meilleurs domaines",
+  },
+  {
+    title: "Horaires flexibles",
+    desc: "Journée, demi-journée ou durée sur mesure",
+  },
+  {
+    title: "Véhicule Mercedes",
+    desc: "Confort premium climatisé pour 1 à 7 passagers",
+  },
+  {
+    title: "Transport de groupe",
+    desc: "Van privé pour les groupes jusqu'à 7 personnes",
+  },
+];
+
+const tourCards = [
   {
     region: "Beaujolais",
-    tag: "40 min de Lyon",
-    duration: "Demi-journée ou journée complète",
-    from: "Dès 350 €",
+    tag: "À 45 min",
     grapes: "Gamay Noir",
     appellations: "Morgon, Moulin-à-Vent, Fleurie, Brouilly",
-    style: "Rouges fruités, villages pittoresques, châteaux et collines dorées",
-    best: "Premiers pas dans le vin, groupes décontractés, itinéraires courts",
+    mood: "Villages pittoresques, châteaux en pierre dorée, vins fruités et accessibles",
+    bestFor: "Primo-visiteurs, couples, demi-journée",
+    from: "Dès 350 €",
     href: "/fr/wine-tours-lyon/beaujolais-wine-tour",
-    cta: "Découvrir le tour Beaujolais",
   },
   {
     region: "Vallée du Rhône",
-    tag: "1h de Lyon",
-    duration: "Journée complète recommandée",
-    from: "Dès 420 €",
+    tag: "À 1h",
     grapes: "Syrah & Viognier",
     appellations: "Côte-Rôtie, Condrieu, Saint-Joseph, Hermitage",
-    style: "Rouges et blancs de renommée mondiale, vignobles en terrasses sur granit",
-    best: "Amateurs de vins sérieux, collectionneurs, journées complètes",
+    mood: "Prestige, puissance, renom mondial",
+    bestFor: "Connaisseurs, collectionneurs",
+    from: "Dès 420 €",
     href: "/fr/wine-tours-lyon/rhone-valley-wine-tour",
-    cta: "Découvrir le tour Vallée du Rhône",
   },
   {
     region: "Bourgogne",
-    tag: "~2h de Lyon",
-    duration: "Journée complète",
-    from: "Dès 520 €",
+    tag: "À 1h45",
     grapes: "Pinot Noir & Chardonnay",
     appellations: "Beaune, Nuits-Saint-Georges, Gevrey-Chambertin, Meursault",
-    style: "Terroir légendaire, caves Grand Cru, Hôtel-Dieu, les plus grands vins du monde",
-    best: "Passionnés, connaisseurs, occasions spéciales",
+    mood: "Légendaire, complexe, les vins les plus prestigieux du monde",
+    bestFor: "Collectionneurs, occasions spéciales",
+    from: "Dès 520 €",
     href: "/fr/wine-tours-lyon/burgundy-wine-tour-from-lyon",
-    cta: "Découvrir le tour Bourgogne",
   },
 ];
 
-const includes = [
-  ["Prise en charge à l'hôtel", "Collecte à domicile depuis votre hébergement à Lyon"],
-  ["Chauffeur bilingue", "Conducteur anglophone et francophone, guide régional"],
-  ["Mercedes haut de gamme", "Véhicule climatisé, confortable et impeccable"],
-  ["Itinéraire flexible", "Votre rythme, vos préférences, votre tour"],
-  ["Visites de domaines", "2–3 propriétés sélectionnées avec soin"],
-  ["Dégustations organisées", "Sur site (droits de dégustation payables aux domaines)"],
+const logisticsPoints = [
+  "Prise en charge directe depuis tout hôtel lyonnais — Grand Hôtel-Dieu, Fourvière Hôtel, Collège Hôtel, et tous les autres",
+  "Départ matinal calé sur votre agenda, généralement entre 9h et 9h30",
+  "Toutes les réservations domaines gérées avant votre excursion, sans frais supplémentaires",
+  "Les excursions journée incluent une recommandation de restaurant pour le déjeuner",
+  "Retour hôtel ou toute adresse à Lyon en soirée",
+];
+
+const stats = [
+  { value: "100+", label: "Groupes internationaux par an" },
+  { value: "5.0★", label: "Note Google" },
+  { value: "3", label: "Régions viticoles" },
+  { value: "< 2h", label: "Délai de réponse" },
 ];
 
 export default function WineToursLyonFR() {
+  const wineFaqs = faqs.filter(
+    (f) =>
+      f.pages.includes("beaujolais") ||
+      f.pages.includes("rhone") ||
+      f.pages.includes("general"),
+  );
+
   const schemas = [
     serviceSchema({
-      name: "Wine Tours Lyon",
+      name: "Wine Tours Privés depuis Lyon",
       description:
-        "Excursions viticoles privées depuis Lyon vers le Beaujolais, la Vallée du Rhône et la Bourgogne avec chauffeur bilingue.",
+        "Réservez un wine tour privé depuis Lyon — Beaujolais, Vallée du Rhône Nord ou Bourgogne. Chauffeur anglophone, Mercedes, prise en charge hôtel, aide aux réservations domaines.",
       url: "/fr/wine-tours-lyon",
       serviceType: "Wine Tour",
     }),
     breadcrumbSchema([
       { name: "Accueil", href: "/fr" },
-      { name: "Wine Tours Lyon" },
+      { name: "Wine Tours" },
     ]),
+    faqSchema(wineFaqs, "fr"),
   ];
 
   return (
@@ -86,76 +123,17 @@ export default function WineToursLyonFR() {
       <JsonLd data={schemas} />
       <Header lang="fr" />
       <main>
+        {/* Section 1: Hero */}
         <Hero
           lang="fr"
-          title="Wine Tours depuis Lyon"
-          subtitle="Trois grandes régions viticoles à portée de Lyon — Beaujolais, Vallée du Rhône et Bourgogne. Excursions privées avec un chauffeur bilingue, adaptées à votre goût."
+          title="Wine Tours Privés depuis Lyon avec Chauffeur Anglophone"
+          subtitle="Beaujolais, Vallée du Rhône Nord et Bourgogne — excursions privées sur mesure depuis Lyon. Prise en charge hôtel, aide aux réservations domaines, véhicule Mercedes."
           ctaPrimary={{ label: "Réserver un wine tour", href: "/fr/contact" }}
-          ctaSecondary={{ label: "Discuter sur WhatsApp", href: "https://wa.me/33658593922" }}
+          ctaSecondary={{ label: "Découvrir le Beaujolais", href: "/fr/wine-tours-lyon/beaujolais-wine-tour" }}
         />
 
-        {/* Tour cards */}
+        {/* Section 2: What's included */}
         <section className="bg-white py-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <FadeIn>
-              <div className="text-center mb-14">
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
-                  Choisissez votre région
-                </span>
-                <h2 className="font-serif text-4xl text-[#080808] mb-4">
-                  Trois régions viticoles d'exception depuis Lyon
-                </h2>
-                <p className="text-gray-500 text-base max-w-xl mx-auto">
-                  Chaque région offre un caractère totalement différent. Parcourez les trois tours ci-dessous — ou contactez-nous et nous vous aiderons à choisir.
-                </p>
-              </div>
-            </FadeIn>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {tours.map((t, i) => (
-                <FadeIn key={t.region} delay={i * 0.1}>
-                  <div className="border border-black/[0.06] rounded-sm overflow-hidden flex flex-col h-full">
-                    <div className="bg-[#080808] p-6">
-                      <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#C6A15B] border border-[#C6A15B]/30 px-3 py-1 rounded-full">
-                        {t.tag}
-                      </span>
-                      <h3 className="font-serif text-3xl text-white mt-4 mb-1">{t.region}</h3>
-                      <p className="text-[#C6A15B] text-xs font-semibold uppercase tracking-wider">{t.duration}</p>
-                    </div>
-                    <div className="bg-[#F7F3EA] p-6 flex flex-col flex-1">
-                      <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-1">
-                        {[
-                          ["Cépages", t.grapes],
-                          ["Appellations", t.appellations],
-                          ["Style", t.style],
-                          ["Idéal pour", t.best],
-                        ].map(([label, value]) => (
-                          <li key={label} className="flex gap-2">
-                            <span className="text-[#C6A15B] flex-shrink-0 mt-0.5">→</span>
-                            <span>
-                              <strong className="text-[#080808]">{label} :</strong> {value}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#C6A15B]/20">
-                        <span className="text-[#C6A15B] font-semibold text-sm">{t.from}</span>
-                        <a
-                          href={t.href}
-                          className="text-xs font-bold uppercase tracking-widest text-[#080808] hover:text-[#C6A15B] transition-colors"
-                        >
-                          {t.cta} →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What's included */}
-        <section className="bg-[#F7F3EA] py-24">
           <div className="max-w-7xl mx-auto px-6">
             <FadeIn>
               <div className="text-center mb-12">
@@ -163,30 +141,242 @@ export default function WineToursLyonFR() {
                   Inclus dans chaque tour
                 </span>
                 <h2 className="font-serif text-4xl text-[#080808] mb-4">
-                  Ce qui est inclus dans votre wine tour privé
+                  Tout est inclus dans votre wine tour privé
+                </h2>
+                <p className="text-gray-500 text-base max-w-xl mx-auto">
+                  Pas de frais cachés. Tous les services ci-dessous sont inclus dans votre devis.
+                </p>
+              </div>
+            </FadeIn>
+            <FadeInStagger>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {includes.map((item) => (
+                  <FadeInItem key={item.title}>
+                    <div className="border border-[#C6A15B]/20 bg-[#F7F3EA] rounded-sm p-6">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[#C6A15B] text-lg font-serif">✓</span>
+                        <span className="font-semibold text-[#080808] text-sm">{item.title}</span>
+                      </div>
+                      <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+                    </div>
+                  </FadeInItem>
+                ))}
+              </div>
+            </FadeInStagger>
+          </div>
+        </section>
+
+        {/* Section 3: Tour destination cards */}
+        <section className="bg-[#080808] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center mb-14">
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
+                  Régions viticoles
+                </span>
+                <h2 className="font-serif text-4xl text-white mb-4">
+                  Choisissez votre région viticole
+                </h2>
+                <p className="text-white/50 text-base max-w-lg mx-auto">
+                  Trois expériences viticoles uniques — toutes à moins de 2 heures de Lyon
+                </p>
+              </div>
+            </FadeIn>
+            <FadeInStagger>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {tourCards.map((card) => (
+                  <FadeInItem key={card.region}>
+                    <div className="border-t-2 border-[#C6A15B] bg-[#171717] rounded-sm p-8 flex flex-col h-full">
+                      <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#C6A15B] border border-[#C6A15B]/30 px-3 py-1 rounded-full self-start mb-4">
+                        {card.tag}
+                      </span>
+                      <h3 className="font-serif text-3xl text-white mb-2">{card.region}</h3>
+                      <p className="text-[#C6A15B] text-xs font-semibold uppercase tracking-wider mb-5">
+                        {card.grapes}
+                      </p>
+                      <ul className="space-y-3 text-sm text-white/70 mb-6 flex-1">
+                        <li className="flex gap-2">
+                          <span className="text-[#C6A15B] flex-shrink-0">→</span>
+                          <span>
+                            <strong className="text-white">Appellations :</strong>{" "}
+                            {card.appellations}
+                          </span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-[#C6A15B] flex-shrink-0">→</span>
+                          <span>
+                            <strong className="text-white">Caractère :</strong> {card.mood}
+                          </span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-[#C6A15B] flex-shrink-0">→</span>
+                          <span>
+                            <strong className="text-white">Idéal pour :</strong> {card.bestFor}
+                          </span>
+                        </li>
+                      </ul>
+                      <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-auto">
+                        <span className="text-[#C6A15B] font-semibold text-sm">{card.from}</span>
+                        <a
+                          href={card.href}
+                          className="text-xs font-bold uppercase tracking-widest text-[#C6A15B] hover:text-white transition-colors"
+                        >
+                          Découvrir →
+                        </a>
+                      </div>
+                    </div>
+                  </FadeInItem>
+                ))}
+              </div>
+            </FadeInStagger>
+          </div>
+        </section>
+
+        {/* Section 4: Custom itinerary */}
+        <section className="bg-[#F7F3EA] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center max-w-2xl mx-auto">
+                <div className="w-16 h-px bg-[#C6A15B] mx-auto mb-8" />
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
+                  Entièrement sur mesure
+                </span>
+                <h2 className="font-serif text-4xl text-[#080808] mb-8">
+                  Chaque excursion est privée et entièrement personnalisée
+                </h2>
+                <p className="text-gray-600 text-base leading-relaxed mb-5">
+                  Pas de groupes partagés. Pas d&apos;horaires imposés. Votre excursion est construite autour
+                  de vos envies, votre rythme et vos domaines préférés. Que vous souhaitiez vous
+                  concentrer sur une seule appellation, combiner deux régions, intégrer un déjeuner dans
+                  un restaurant étoilé ou prolonger votre journée — nous nous en chargeons.
+                </p>
+                <p className="text-gray-600 text-base leading-relaxed mb-10">
+                  Dites-nous simplement ce que vous recherchez lors de votre prise de contact. Nous vous
+                  proposerons un itinéraire, prendrons en charge les réservations et préparerons votre
+                  véhicule.
+                </p>
+                <a
+                  href="/fr/contact"
+                  className="text-[#C6A15B] font-semibold text-sm tracking-wide hover:text-[#080808] transition-colors"
+                >
+                  Construire votre itinéraire sur mesure →
+                </a>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* Section 5: Hotel pickup & logistics */}
+        <section className="bg-white py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center mb-14">
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
+                  Service porte-à-porte
+                </span>
+                <h2 className="font-serif text-4xl text-[#080808] mb-4">
+                  Une logistique sans effort, depuis la porte de votre hôtel
                 </h2>
               </div>
             </FadeIn>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {includes.map(([title, desc], i) => (
-                <FadeIn key={title} delay={i * 0.07}>
-                  <div className="border border-[#C6A15B]/20 bg-white rounded-sm p-6">
-                    <span className="text-[#C6A15B] text-lg font-serif mr-2">✓</span>
-                    <span className="font-semibold text-[#080808] text-sm">{title}</span>
-                    <p className="text-gray-500 text-xs leading-relaxed mt-2">{desc}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <FadeIn direction="left">
+                <ul className="space-y-5">
+                  {logisticsPoints.map((point) => (
+                    <li key={point} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                      <span className="text-[#C6A15B] flex-shrink-0 font-bold mt-0.5">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+              <FadeIn direction="right">
+                <div className="bg-[#F7F3EA] border border-[#C6A15B]/20 p-8">
+                  <div className="grid grid-cols-2 gap-6">
+                    {stats.map((stat) => (
+                      <div key={stat.value} className="text-center">
+                        <p className="font-serif text-4xl text-[#C6A15B] mb-1">{stat.value}</p>
+                        <p className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</p>
+                      </div>
+                    ))}
                   </div>
-                </FadeIn>
-              ))}
+                </div>
+              </FadeIn>
             </div>
           </div>
         </section>
 
-        <ReviewsCarousel lang="fr" />
-        <BookingCTA
-          lang="fr"
-          title="Prêt à explorer les vignobles autour de Lyon ?"
-          subtitle="Contactez-nous pour concevoir votre wine tour privé idéal. Disponible pour 1 à 8 personnes."
-        />
+        {/* Section 6: Reviews */}
+        <section className="bg-[#F7F3EA] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center mb-12">
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
+                  Témoignages clients
+                </span>
+                <h2 className="font-serif text-4xl text-[#080808] mb-4">
+                  Ce que disent nos clients internationaux
+                </h2>
+              </div>
+            </FadeIn>
+          </div>
+          <ReviewsCarousel lang="fr" />
+        </section>
+
+        {/* Section 7: Private van for groups */}
+        <section className="bg-[#080808] py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <FadeIn>
+              <div className="text-center mb-14">
+                <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
+                  Wine tours en groupe
+                </span>
+                <h2 className="font-serif text-4xl text-white mb-4">
+                  Excursions privées en groupe — jusqu&apos;à 7 passagers
+                </h2>
+              </div>
+            </FadeIn>
+            <FadeInStagger>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                {[
+                  {
+                    title: "Mercedes V-Class",
+                    desc: "Van 7 places spacieux pour tout le groupe avec de la place pour vos achats.",
+                  },
+                  {
+                    title: "Famille & amis",
+                    desc: "Anniversaires, célébrations, team building corporate.",
+                  },
+                  {
+                    title: "Tarifs groupe",
+                    desc: "Devis personnalisés pour 4 à 7 personnes. Meilleur rapport par personne.",
+                  },
+                ].map((feat) => (
+                  <FadeInItem key={feat.title}>
+                    <div className="text-center p-6">
+                      <h3 className="font-serif text-2xl text-[#C6A15B] mb-3">{feat.title}</h3>
+                      <p className="text-white/60 text-sm leading-relaxed">{feat.desc}</p>
+                    </div>
+                  </FadeInItem>
+                ))}
+              </div>
+            </FadeInStagger>
+            <div className="text-center">
+              <a
+                href="/fr/contact"
+                className="inline-block bg-[#C6A15B] text-[#080808] font-semibold text-sm uppercase tracking-widest px-8 py-4 rounded-sm hover:bg-[#d4b06a] transition-colors"
+              >
+                Demander un devis groupe
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 8: FAQ */}
+        <FAQSection lang="fr" items={wineFaqs} />
+
+        {/* Section 9: BookingCTA */}
+        <BookingCTA lang="fr" title="Planifiez votre wine tour privé depuis Lyon" />
       </main>
       <Footer lang="fr" />
       <MobileStickyCTA lang="fr" />
