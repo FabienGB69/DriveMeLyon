@@ -86,6 +86,9 @@ export default function RhoneValleyWineTourEN() {
           subtitle="Venture south from Lyon to one of France's most revered wine landscapes. Steep granite terraces, world-class Syrah, and rare Viognier — a full-day private experience unlike any other."
           ctaPrimary={{ label: "Book this tour", href: "/en/contact" }}
           ctaSecondary={{ label: "See all wine tours", href: "/en/wine-tours-from-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Rhône Valley vineyard wine tasting"
         />
 
         {/* Appellations */}

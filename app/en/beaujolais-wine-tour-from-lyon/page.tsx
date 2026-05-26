@@ -28,6 +28,9 @@ export default function BeaujolaisWineTourEN() {
           subtitle="Enjoy a private wine experience through the Beaujolais vineyards with hotel pickup, English-speaking chauffeur and a flexible itinerary."
           ctaPrimary={{ label: "Book your Beaujolais Wine Tour", href: "/en/contact" }}
           ctaSecondary={{ label: "Request availability", href: "/en/contact" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1559666082-998df2b4e28b?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Beaujolais vineyard hills at golden hour"
         />
 
         {/* Experience details */}

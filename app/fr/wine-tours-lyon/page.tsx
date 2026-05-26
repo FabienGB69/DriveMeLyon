@@ -130,6 +130,9 @@ export default function WineToursLyonFR() {
           subtitle="Beaujolais, Vallée du Rhône Nord et Bourgogne — excursions privées sur mesure depuis Lyon. Prise en charge hôtel, aide aux réservations domaines, véhicule Mercedes."
           ctaPrimary={{ label: "Réserver un wine tour", href: "/fr/contact" }}
           ctaSecondary={{ label: "Découvrir le Beaujolais", href: "/fr/wine-tours-lyon/beaujolais-wine-tour" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Wine tours from Lyon vineyard"
         />
 
         {/* Section 2: What's included */}

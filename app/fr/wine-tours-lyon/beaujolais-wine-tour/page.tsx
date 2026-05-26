@@ -66,6 +66,9 @@ export default function BeaujolaisWineTourFR() {
           subtitle="À seulement 40 minutes de Lyon, les collines dorées du Beaujolais vous attendent. Villages pittoresques, domaines familiaux et vins de crus — une journée inoubliable avec votre chauffeur privé."
           ctaPrimary={{ label: "Réserver ce tour", href: "/fr/contact" }}
           ctaSecondary={{ label: "Voir tous les wine tours", href: "/fr/wine-tours-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1559666082-998df2b4e28b?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Beaujolais vineyard hills at golden hour"
         />
 
         {/* Appellations */}

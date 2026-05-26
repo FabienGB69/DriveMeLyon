@@ -82,6 +82,9 @@ export default function BurgundyWineTourEN() {
           subtitle="Two hours north of Lyon lies the Côte d'Or — arguably the world's greatest wine landscape. Pinot Noir and Chardonnay from legendary villages, ancient cellars, and Michelin-starred villages await."
           ctaPrimary={{ label: "Book this tour", href: "/en/contact" }}
           ctaSecondary={{ label: "See all wine tours", href: "/en/wine-tours-from-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1474722883778-792e7fb1f4a2?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Burgundy wine cellar Côte d'Or"
         />
 
         {/* Highlights */}

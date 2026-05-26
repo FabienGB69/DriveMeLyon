@@ -41,6 +41,9 @@ export default function LyonAirportTransferEN() {
           subtitle="Premium private airport transfer to and from Lyon Saint-Exupéry Airport (LYS). Mercedes vehicles, English-speaking chauffeur, real-time flight tracking, meet & greet included."
           ctaPrimary={{ label: "Book airport transfer", href: "/en/contact" }}
           ctaSecondary={{ label: "Chat on WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon Saint-Exupéry airport transfer"
         />
         <Fleet lang="en" />
         <BookingCTA lang="en" title="Book your Lyon airport transfer" subtitle="Fast response, competitive rates, and premium Mercedes comfort guaranteed." />

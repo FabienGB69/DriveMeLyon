@@ -130,6 +130,9 @@ export default function WineToursFromLyonEN() {
           subtitle="Beaujolais, Northern Rhône Valley and Burgundy — bespoke private day trips from Lyon. Hotel pickup, winery reservations assistance, Mercedes vehicle."
           ctaPrimary={{ label: "Book a wine tour", href: "/en/contact" }}
           ctaSecondary={{ label: "Discover Beaujolais", href: "/en/beaujolais-wine-tour-from-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Wine tours from Lyon vineyard"
         />
 
         {/* Section 2: What's included */}

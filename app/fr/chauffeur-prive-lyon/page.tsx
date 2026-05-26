@@ -125,6 +125,9 @@ export default function ChauffeurPriveLyonFR() {
           subtitle="Réunions professionnelles, arrivées en hôtels de luxe, transferts aéroport, soirées événementielles — discrétion, ponctualité, flotte Mercedes premium."
           ctaPrimary={{ label: "Réserver un chauffeur", href: "/fr/contact" }}
           ctaSecondary={{ label: "Voir les tarifs", href: "/fr/prices" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes luxury chauffeur vehicle"
         />
 
         {/* Section 1: Use cases */}

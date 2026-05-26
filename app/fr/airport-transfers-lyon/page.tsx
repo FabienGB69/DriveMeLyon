@@ -84,6 +84,9 @@ export default function AirportTransfersLyonFR() {
           subtitle="Arrivez et repartez en toute sérénité. Transferts privés à prix fixe vers l'aéroport de Lyon Saint-Exupéry, avec suivi des vols, accueil personnalisé et Mercedes haut de gamme. Disponible 24h/24."
           ctaPrimary={{ label: "Réserver un transfert", href: "/fr/contact" }}
           ctaSecondary={{ label: "Devis rapide sur WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon Saint-Exupéry airport transfer"
         />
 
         {/* Features */}

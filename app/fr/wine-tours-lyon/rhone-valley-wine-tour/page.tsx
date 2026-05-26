@@ -82,6 +82,9 @@ export default function RhoneValleyWineTourFR() {
           subtitle="Partez vers le sud depuis Lyon à la découverte d'un des plus grands vignobles de France. Terrasses de granit, Syrah d'exception et Viognier rare — une journée privée hors du commun."
           ctaPrimary={{ label: "Réserver ce tour", href: "/fr/contact" }}
           ctaSecondary={{ label: "Voir tous les wine tours", href: "/fr/wine-tours-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Rhône Valley vineyard wine tasting"
         />
 
         {/* Appellations */}

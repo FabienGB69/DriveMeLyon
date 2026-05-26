@@ -125,6 +125,9 @@ export default function PrivateChauffeurLyonEN() {
           subtitle="Business meetings, luxury hotel arrivals, airport runs, evening events — discreet, punctual, premium Mercedes fleet."
           ctaPrimary={{ label: "Request a chauffeur", href: "/en/contact" }}
           ctaSecondary={{ label: "View rates", href: "/en/rates" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes luxury chauffeur vehicle"
         />
 
         {/* Section 1: Use cases */}

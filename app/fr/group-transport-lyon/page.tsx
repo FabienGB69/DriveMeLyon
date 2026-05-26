@@ -77,6 +77,9 @@ export default function GroupTransportLyonFR() {
           subtitle="Voyagez ensemble dans le confort. Mercedes V-Class Viano pour des groupes jusqu'à 7 passagers, avec un chauffeur professionnel. Mariages, événements d'entreprise, wine tours, transferts aéroport — tout est couvert."
           ctaPrimary={{ label: "Demander un devis groupe", href: "/fr/contact" }}
           ctaSecondary={{ label: "Nous contacter sur WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes V-Class group transport"
         />
 
         {/* Use cases */}

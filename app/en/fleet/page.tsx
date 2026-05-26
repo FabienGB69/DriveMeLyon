@@ -53,6 +53,9 @@ export default function FleetEN() {
           subtitle="Every vehicle in our fleet is a Mercedes — selected for comfort, reliability, and elegance. Whether you're travelling solo, with family, or as a group, we have the perfect vehicle for your journey."
           ctaPrimary={{ label: "Book a vehicle", href: "/en/contact" }}
           ctaSecondary={{ label: "View rates", href: "/en/rates" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes premium fleet"
         />
 
         <Fleet lang="en" />

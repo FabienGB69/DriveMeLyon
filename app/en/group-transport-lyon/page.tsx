@@ -92,6 +92,9 @@ export default function GroupTransportLyonEN() {
           subtitle="Travel together in comfort. Mercedes V-Class minivan for groups of up to 7 passengers, with a professional chauffeur. Weddings, corporate events, wine tours, airport transfers — all covered."
           ctaPrimary={{ label: "Request a group quote", href: "/en/contact" }}
           ctaSecondary={{ label: "WhatsApp us", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes V-Class group transport"
         />
 
         {/* Use cases */}
