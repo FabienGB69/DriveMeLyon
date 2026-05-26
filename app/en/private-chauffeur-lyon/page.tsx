@@ -207,7 +207,7 @@ export default function PrivateChauffeurLyonEN() {
               </div>
             </FadeIn>
             <FadeIn>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
                 {included.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="text-[#C6A15B] font-bold mt-0.5 flex-shrink-0">✓</span>
@@ -220,7 +220,7 @@ export default function PrivateChauffeurLyonEN() {
         </section>
 
         {/* Section 4: WhatsApp CTA strip */}
-        <section className="bg-[#5A1F2B] py-16">
+        <section className="bg-[#5A1F2B] py-24">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <FadeIn>
               <h2 className="font-serif text-3xl md:text-4xl text-white mb-3">

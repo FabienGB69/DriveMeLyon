@@ -129,7 +129,7 @@ export default function AirportTransfersLyonFR() {
                 </h2>
               </div>
             </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {routes.map((r, i) => (
                 <FadeIn key={i} delay={i * 0.08}>
                   <div className="border border-white/10 rounded-sm p-6 flex items-center justify-between hover:border-[#C6A15B]/40 transition-colors">

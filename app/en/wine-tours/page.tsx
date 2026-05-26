@@ -244,7 +244,7 @@ export default function WineToursEN() {
                 <span className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3 block">
                   Fully bespoke
                 </span>
-                <h2 className="font-serif text-4xl text-[#080808] mb-8">
+                <h2 className="font-serif text-4xl text-[#080808] mb-12">
                   Every tour is private and fully customized
                 </h2>
                 <p className="text-gray-600 text-base leading-relaxed mb-5">
