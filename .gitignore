@@ -40,4 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 data/state_store.db/
-.claude/
+.claude/*
+!.claude/commands/
+!.claude/commands/*.md
