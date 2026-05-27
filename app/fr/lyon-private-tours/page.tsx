@@ -84,6 +84,9 @@ export default function LyonPrivateToursFR() {
           subtitle="Lyon se révèle à ceux qui prennent le temps de l'explorer. Découvrez le Vieux-Lyon classé UNESCO, la basilique de Fourvière, la Croix-Rousse bohème et la majestueuse Presqu'île — à votre rythme avec votre chauffeur bilingue."
           ctaPrimary={{ label: "Réserver une visite", href: "/fr/contact" }}
           ctaSecondary={{ label: "Discuter sur WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon city private tour"
         />
 
         {/* Quartiers */}

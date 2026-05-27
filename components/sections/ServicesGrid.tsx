@@ -15,6 +15,8 @@ interface ServiceCard {
   descFr: string;
   hrefEn: string;
   hrefFr: string;
+  image: string;
+  imageAlt: string;
 }
 
 const services: ServiceCard[] = [
@@ -28,6 +30,8 @@ const services: ServiceCard[] = [
       "Transferts à prix fixe vers/depuis Lyon Saint-Exupéry, 24h/24, avec suivi de vol.",
     hrefEn: "/en/lyon-airport-transfers",
     hrefFr: "/fr/airport-transfers-lyon",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Lyon Saint-Exupéry airport",
   },
   {
     Icon: Briefcase,
@@ -37,6 +41,8 @@ const services: ServiceCard[] = [
     descFr: "Déplacements professionnels, discrétion et ponctualité garanties.",
     hrefEn: "/en/private-driver-lyon",
     hrefFr: "/fr/chauffeur-prive-lyon",
+    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Mercedes luxury chauffeur",
   },
   {
     Icon: MapPin,
@@ -46,6 +52,8 @@ const services: ServiceCard[] = [
     descFr: "Exploration guidée des incontournables de Lyon, 2–4h.",
     hrefEn: "/en/private-lyon-city-tour",
     hrefFr: "/fr/lyon-private-tours",
+    image: "https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Lyon city view",
   },
   {
     Icon: Users,
@@ -55,6 +63,8 @@ const services: ServiceCard[] = [
     descFr: "Mercedes Classe V pour groupes jusqu'à 8 personnes, événements et excursions.",
     hrefEn: "/en/group-transport-lyon",
     hrefFr: "/fr/group-transport-lyon",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Mercedes V-Class minivan",
   },
   {
     Icon: Heart,
@@ -64,6 +74,8 @@ const services: ServiceCard[] = [
     descFr: "Service impeccable pour votre grand jour.",
     hrefEn: "/en/wedding-event-chauffeur-lyon",
     hrefFr: "/fr/wedding-event-chauffeur-lyon",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+    imageAlt: "Wedding luxury car",
   },
 ];
 
@@ -73,9 +85,9 @@ export function ServicesGrid({ lang = "en" }: ServicesGridProps) {
   const learnMore = lang === "fr" ? "En savoir plus →" : "Learn more →";
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3">
             {label}
           </p>
@@ -84,7 +96,7 @@ export function ServicesGrid({ lang = "en" }: ServicesGridProps) {
           </h2>
         </div>
 
-        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service) => {
             const { Icon } = service;
             const title = lang === "fr" ? service.titleFr : service.titleEn;
@@ -93,25 +105,35 @@ export function ServicesGrid({ lang = "en" }: ServicesGridProps) {
 
             return (
               <FadeInItem key={title}>
-                <div className="border-l-2 border-[#C6A15B] bg-[#F7F3EA]/60 pl-5 pr-4 py-6 rounded-sm flex flex-col h-full">
-                  <div className="mb-4">
-                    <Icon
-                      className="w-6 h-6 text-[#C6A15B]"
-                      strokeWidth={1.5}
+                <div className="bg-[#F7F3EA] rounded-sm border border-black/[0.03] overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/40 to-transparent" />
                   </div>
-                  <h3 className="font-serif text-xl text-[#080808] mb-2 leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-[#171717]/65 text-sm leading-relaxed flex-1 mb-5">
-                    {desc}
-                  </p>
-                  <Link
-                    href={href}
-                    className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] hover:text-[#b38e4a] transition-colors"
-                  >
-                    {learnMore}
-                  </Link>
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="text-[#C6A15B] mb-3">
+                      <Icon className="w-6 h-6" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-serif text-xl text-[#080808] mb-2 leading-snug">
+                      {title}
+                    </h3>
+                    <p className="text-gray-500 text-xs leading-relaxed mb-4">
+                      {desc}
+                    </p>
+                    <Link
+                      href={href}
+                      className="text-xs font-bold uppercase tracking-widest text-[#C6A15B] hover:underline"
+                    >
+                      {learnMore}
+                    </Link>
+                  </div>
                 </div>
               </FadeInItem>
             );

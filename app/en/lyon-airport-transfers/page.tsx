@@ -84,6 +84,9 @@ export default function LyonAirportTransfersEN() {
           subtitle="Arrive and depart in comfort. Fixed-price private transfers to Lyon Saint-Exupéry Airport with flight tracking, meet & greet, and premium Mercedes vehicles. Available 24 hours a day."
           ctaPrimary={{ label: "Book a transfer", href: "/en/contact" }}
           ctaSecondary={{ label: "Get a quote on WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon Saint-Exupéry airport transfer"
         />
 
         {/* Features */}
@@ -132,7 +135,7 @@ export default function LyonAirportTransfersEN() {
                 </p>
               </div>
             </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {routes.map((r, i) => (
                 <FadeIn key={i} delay={i * 0.08}>
                   <div className="border border-white/10 rounded-sm p-6 flex items-center justify-between hover:border-[#C6A15B]/40 transition-colors">

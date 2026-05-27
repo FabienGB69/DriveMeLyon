@@ -84,6 +84,9 @@ export default function PrivateLyonCityTourEN() {
           subtitle="Lyon is a city that rewards exploration. Discover UNESCO-listed Vieux-Lyon, the hilltop basilica at Fourvière, the bohemian Croix-Rousse, and the grand Presqu'île — at your own pace with a knowledgeable English-speaking driver."
           ctaPrimary={{ label: "Book a city tour", href: "/en/contact" }}
           ctaSecondary={{ label: "Chat on WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon city private tour"
         />
 
         {/* Neighbourhoods */}

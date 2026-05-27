@@ -38,6 +38,9 @@ export default function ReviewsFR() {
           subtitle="Chaque avis ici provient d'un vrai client Drive Me Lyon. Nous sommes fiers de notre réputation 5 étoiles — et nous travaillons chaque jour pour la maintenir. Avis vérifiés via Google."
           ctaPrimary={{ label: "Réserver votre expérience", href: "/fr/contact" }}
           ctaSecondary={{ label: "Laisser un avis sur Google", href: "https://search.google.com/local/reviews?placeid=ChIJ6cu2eq3t9EcRgv3ak_zahtI" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Happy wine tour guests"
         />
 
         <ReviewsCarousel lang="fr" />

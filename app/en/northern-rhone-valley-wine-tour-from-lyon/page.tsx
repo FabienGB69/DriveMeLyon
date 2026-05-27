@@ -28,6 +28,9 @@ export default function RhoneWineTourEN() {
           subtitle="Discover some of France's most iconic wine appellations with a private chauffeur from Lyon: Côte-Rôtie, Condrieu, Saint-Joseph, Hermitage and Crozes-Hermitage."
           ctaPrimary={{ label: "Request a private Rhône Valley wine tour", href: "/en/contact" }}
           ctaSecondary={{ label: "Request availability", href: "/en/contact" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Rhône Valley vineyard wine tasting"
         />
 
         <section className="bg-[#F7F3EA] py-24">

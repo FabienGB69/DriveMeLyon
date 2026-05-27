@@ -87,6 +87,9 @@ export default function PrivateDriverLyonEN() {
           subtitle="Professional, discreet, and always on time. Whether you need an airport run, a corporate chauffeur, or a full-day driver across Lyon, we have you covered with premium Mercedes vehicles."
           ctaPrimary={{ label: "Request a driver", href: "/en/contact" }}
           ctaSecondary={{ label: "View our fleet", href: "/en/fleet" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes luxury chauffeur vehicle"
         />
 
         {/* Services grid */}

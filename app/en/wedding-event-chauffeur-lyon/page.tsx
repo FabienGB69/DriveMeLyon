@@ -80,6 +80,9 @@ export default function WeddingEventChauffeurLyonEN() {
           subtitle="Your most important day deserves flawless transport. Impeccably presented Mercedes vehicles, a professional chauffeur, and white-glove service from ceremony to celebration."
           ctaPrimary={{ label: "Enquire for your wedding", href: "/en/contact" }}
           ctaSecondary={{ label: "Chat on WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Wedding chauffeur luxury vehicle Lyon"
         />
 
         {/* Services */}

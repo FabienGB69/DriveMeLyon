@@ -12,6 +12,9 @@ interface CardData {
   descFr: string;
   hrefEn: string;
   hrefFr: string;
+  image: string;
+  alt: string;
+  tag: string;
 }
 
 const cards: CardData[] = [
@@ -24,6 +27,9 @@ const cards: CardData[] = [
       "Villages pittoresques, domaines familiaux et vins de Gamay — à 45 min de Lyon.",
     hrefEn: "/en/beaujolais-wine-tour-from-lyon",
     hrefFr: "/fr/wine-tours-lyon/beaujolais-wine-tour",
+    image: "https://images.unsplash.com/photo-1559666082-998df2b4e28b?auto=format&fit=crop&w=800&q=80",
+    alt: "Beaujolais vineyard hills",
+    tag: "Beaujolais",
   },
   {
     titleEn: "Rhône Valley",
@@ -34,6 +40,9 @@ const cards: CardData[] = [
       "Côte-Rôtie, Condrieu, Hermitage — appellations prestigieuses le long du Rhône.",
     hrefEn: "/en/rhone-valley-wine-tour-from-lyon",
     hrefFr: "/fr/wine-tours-lyon/rhone-valley-wine-tour",
+    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
+    alt: "Rhône Valley wine tasting",
+    tag: "Rhône Valley",
   },
   {
     titleEn: "Burgundy",
@@ -44,6 +53,9 @@ const cards: CardData[] = [
       "Côte d'Or, Beaune, Nuits-Saint-Georges — les plus grands Pinot Noir et Chardonnay.",
     hrefEn: "/en/burgundy-wine-tour-from-lyon",
     hrefFr: "/fr/wine-tours-lyon/burgundy-wine-tour-from-lyon",
+    image: "https://images.unsplash.com/photo-1474722883778-792e7fb1f4a2?auto=format&fit=crop&w=800&q=80",
+    alt: "Burgundy wine cellar",
+    tag: "Burgundy",
   },
   {
     titleEn: "Custom Private Day",
@@ -54,6 +66,9 @@ const cards: CardData[] = [
       "Combinez les régions, ajustez le rythme, ajoutez un restaurant — tout est sur mesure.",
     hrefEn: "/en/contact",
     hrefFr: "/fr/contact",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
+    alt: "Private wine tasting experience",
+    tag: "Private",
   },
 ];
 
@@ -65,13 +80,13 @@ export function WineToursHub({ lang = "en" }: WineToursHubProps) {
   const learnMore = lang === "fr" ? "Découvrir" : "Explore";
 
   return (
-    <section className="bg-[#F7F3EA] py-24">
+    <section className="bg-[#F7F3EA] py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#C6A15B] mb-3">
             {label}
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#080808]">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#080808] max-w-2xl mx-auto">
             {heading}
           </h2>
         </div>
@@ -84,20 +99,33 @@ export function WineToursHub({ lang = "en" }: WineToursHubProps) {
 
             return (
               <FadeInItem key={title}>
-                <div className="bg-white border-t-2 border-[#C6A15B] rounded-sm shadow-sm p-6 flex flex-col h-full">
-                  <h3 className="font-serif text-2xl text-[#080808] mb-3">
-                    {title}
-                  </h3>
-                  <p className="text-[#171717]/70 text-sm leading-relaxed flex-1 mb-6">
-                    {desc}
-                  </p>
-                  <Link
-                    href={href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#C6A15B] hover:text-[#b38e4a] transition-colors"
-                  >
-                    {learnMore}
-                    <span aria-hidden="true">→</span>
-                  </Link>
+                <div className="bg-white rounded-sm border border-black/[0.03] overflow-hidden shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    {/* Overlay tag */}
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[0.6rem] font-bold uppercase tracking-widest text-white bg-[#080808]/70 px-2.5 py-1 rounded-sm backdrop-blur-sm">
+                        {card.tag}
+                      </span>
+                    </div>
+                  </div>
+                  {/* Content */}
+                  <div className="p-7">
+                    <h3 className="font-serif text-2xl text-[#080808] mb-3">{title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed mb-5">{desc}</p>
+                    <Link
+                      href={href}
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C6A15B] hover:gap-4 transition-all"
+                    >
+                      {learnMore} →
+                    </Link>
+                  </div>
                 </div>
               </FadeInItem>
             );

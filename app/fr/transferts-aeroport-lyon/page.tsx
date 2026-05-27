@@ -24,6 +24,9 @@ export default function TransfertsAeroportLyonFR() {
           subtitle="Transfert privé premium vers et depuis l'aéroport de Lyon Saint-Exupéry (LYS). Véhicules Mercedes, chauffeur anglophone, suivi des vols en temps réel, accueil personnalisé."
           ctaPrimary={{ label: "Réserver un transfert aéroport", href: "/fr/contact" }}
           ctaSecondary={{ label: "Contacter par WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Lyon Saint-Exupéry airport transfer"
         />
         <Fleet lang="fr" />
         <BookingCTA lang="fr" title="Réservez votre transfert aéroport Lyon" subtitle="Réponse rapide, tarifs compétitifs et confort Mercedes garanti." />

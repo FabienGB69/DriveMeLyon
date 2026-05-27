@@ -53,6 +53,9 @@ export default function FleetFR() {
           subtitle="Chaque véhicule de notre flotte est une Mercedes — sélectionnée pour son confort, sa fiabilité et son élégance. Que vous voyagiez seul, en famille ou en groupe, nous avons le véhicule idéal pour votre trajet."
           ctaPrimary={{ label: "Réserver un véhicule", href: "/fr/contact" }}
           ctaSecondary={{ label: "Voir nos tarifs", href: "/fr/prices" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Mercedes premium fleet"
         />
 
         <Fleet lang="fr" />

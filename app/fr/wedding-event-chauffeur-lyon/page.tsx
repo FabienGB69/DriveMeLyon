@@ -80,6 +80,9 @@ export default function WeddingEventChauffeurLyonFR() {
           subtitle="Votre plus beau jour mérite un transport irréprochable. Véhicules Mercedes soigneusement présentés, chauffeur professionnel et service blanc gant de la cérémonie à la réception."
           ctaPrimary={{ label: "Demander un devis mariage", href: "/fr/contact" }}
           ctaSecondary={{ label: "Discuter sur WhatsApp", href: "https://wa.me/33658593922" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Wedding chauffeur luxury vehicle Lyon"
         />
 
         {/* Services */}

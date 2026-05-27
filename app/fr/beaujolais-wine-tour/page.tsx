@@ -28,6 +28,9 @@ export default function BeaujolaisWineTourFR() {
           subtitle="Partez à la découverte des vignobles du Beaujolais lors d'une excursion privée depuis Lyon. Chauffeur anglophone, Mercedes premium, domaines familiaux sélectionnés et dégustations exclusives."
           ctaPrimary={{ label: "Réserver ce Wine Tour", href: "/fr/contact" }}
           ctaSecondary={{ label: "Consulter les disponibilités", href: "/fr/contact" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1559666082-998df2b4e28b?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Beaujolais vineyard hills at golden hour"
         />
 
         <section className="bg-[#F7F3EA] py-24">

@@ -78,6 +78,9 @@ export default function BurgundyWineTourFR() {
           subtitle="À deux heures au nord de Lyon se trouve la Côte d'Or — sans doute le plus grand vignoble du monde. Pinot Noir et Chardonnay de légende, caves ancestrales et villages classés vous attendent."
           ctaPrimary={{ label: "Réserver ce tour", href: "/fr/contact" }}
           ctaSecondary={{ label: "Voir tous les wine tours", href: "/fr/wine-tours-lyon" }}
+        
+          imageSrc="https://images.unsplash.com/photo-1474722883778-792e7fb1f4a2?auto=format&fit=crop&w=1920&q=80"
+          imageAlt="Burgundy wine cellar Côte d'Or"
         />
 
         {/* Villages */}
